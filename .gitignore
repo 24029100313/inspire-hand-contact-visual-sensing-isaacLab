@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Isaac Sim/Omniverse specific
+*.usd~
+*.usda~
+logs/
+outputs/
+omni.log*
+kit_*_log.txt
+.coverage
+.pytest_cache/
+
+# Large binary files (USD files are typically large)
+# Uncomment the line below if USD files are too large for git
+# *.usd
+
+# Simulation data
+*.bag
+*.rosbag
+*.mcap
+
+# Isaac Lab specific
+*.whl
+cache/
+_isaac_sim/
+_isaac_lab/
+
+# Conda/Pip
+Pipfile
+Pipfile.lock
+
+# Documentation builds
+docs/_build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Exclude IsaacLab (external project)
+IsaacLab/ 

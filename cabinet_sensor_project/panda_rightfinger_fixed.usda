@@ -1,0 +1,153 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary audioSettings = {
+            double dopplerLimit = 2
+            double dopplerScale = 1
+            double nonSpatialTimeScale = 1
+            double spatialTimeScale = 1
+            double speedOfSound = 340
+        }
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (1000.0000000000002, -2.220446049250313e-13, 0)
+                double radius = 500
+                double3 target = (0, 0, 0)
+            }
+            dictionary Perspective = {
+                double3 position = (6.043259072405306, 7.356312347398158, 8.744886683587938)
+                double radius = 10.46717466594252
+                double3 target = (0.00003291328819088335, 1.3130861882810434, 2.701660668711934)
+            }
+            dictionary Right = {
+                double3 position = (0, -1000, -2.220446049250313e-13)
+                double radius = 500
+                double3 target = (0, 0, 0)
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 1000)
+                double radius = 500
+                double3 target = (0, 0, 0)
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./panda_rightfinger.usd"
+            dictionary locked = {
+            }
+            dictionary muteness = {
+            }
+        }
+        dictionary renderSettings = {
+            double "rtx:post:lensDistortion:cameraFocalLength" = 18.14756202697754
+        }
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+def Xform "Root" (
+    instanceable = false
+    kind = ""
+)
+{
+    def Mesh "panda_rightfinger" (
+        prepend apiSchemas = ["PhysicsMassAPI", "PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-1.0500901, -0.00837643, 0.0133332), (1.050156, 2.634549, 5.389988)]
+        # ... 这里放置原始panda_rightfinger的网格数据 ...
+        uniform token physics:approximation = "convexDecomposition"
+        point3f physics:centerOfMass = (0, 0, 0)
+        bool physics:collisionEnabled = 1
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:scale"]
+    }
+
+    def "Looks" (
+        instanceable = false
+        prepend references = @../Materials/Materials.usd@
+    )
+    {
+    }
+
+    # === 右夹爪传感器Pad - 4个传感器pad位于黑色橡胶块上 ===
+    
+    def Mesh "sensor_pad_1" (
+        prepend apiSchemas = ["PhysicsMassAPI", "PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.4, -0.4, -0.1), (0.4, 0.4, 0.1)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 3, 2, 2, 3, 5, 4, 4, 5, 7, 6, 6, 7, 1, 0, 1, 7, 5, 3, 6, 0, 2, 4]
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(-0.4, -0.4, -0.1), (0.4, -0.4, -0.1), (-0.4, 0.4, -0.1), (0.4, 0.4, -0.1), (-0.4, 0.4, 0.1), (0.4, 0.4, 0.1), (-0.4, -0.4, 0.1), (0.4, -0.4, 0.1)]
+        rel material:binding = </Root/Looks/PlasticGreen>
+        bool physics:collisionEnabled = 1
+        float physics:mass = 0.001
+        double3 xformOp:translate = (-0.4760, 0.0000, 4.3190)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Mesh "sensor_pad_2" (
+        prepend apiSchemas = ["PhysicsMassAPI", "PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.4, -0.4, -0.1), (0.4, 0.4, 0.1)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 3, 2, 2, 3, 5, 4, 4, 5, 7, 6, 6, 7, 1, 0, 1, 7, 5, 3, 6, 0, 2, 4]
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(-0.4, -0.4, -0.1), (0.4, -0.4, -0.1), (-0.4, 0.4, -0.1), (0.4, 0.4, -0.1), (-0.4, 0.4, 0.1), (0.4, 0.4, 0.1), (-0.4, -0.4, 0.1), (0.4, -0.4, 0.1)]
+        rel material:binding = </Root/Looks/PlasticGreen>
+        bool physics:collisionEnabled = 1
+        float physics:mass = 0.001
+        double3 xformOp:translate = (0.4760, 0.0000, 4.3190)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Mesh "sensor_pad_3" (
+        prepend apiSchemas = ["PhysicsMassAPI", "PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.4, -0.4, -0.1), (0.4, 0.4, 0.1)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 3, 2, 2, 3, 5, 4, 4, 5, 7, 6, 6, 7, 1, 0, 1, 7, 5, 3, 6, 0, 2, 4]
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(-0.4, -0.4, -0.1), (0.4, -0.4, -0.1), (-0.4, 0.4, -0.1), (0.4, 0.4, -0.1), (-0.4, 0.4, 0.1), (0.4, 0.4, 0.1), (-0.4, -0.4, 0.1), (0.4, -0.4, 0.1)]
+        rel material:binding = </Root/Looks/PlasticGreen>
+        bool physics:collisionEnabled = 1
+        float physics:mass = 0.001
+        double3 xformOp:translate = (-0.4760, 0.0000, 5.2710)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Mesh "sensor_pad_4" (
+        prepend apiSchemas = ["PhysicsMassAPI", "PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.4, -0.4, -0.1), (0.4, 0.4, 0.1)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 3, 2, 2, 3, 5, 4, 4, 5, 7, 6, 6, 7, 1, 0, 1, 7, 5, 3, 6, 0, 2, 4]
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(-0.4, -0.4, -0.1), (0.4, -0.4, -0.1), (-0.4, 0.4, -0.1), (0.4, 0.4, -0.1), (-0.4, 0.4, 0.1), (0.4, 0.4, 0.1), (-0.4, -0.4, 0.1), (0.4, -0.4, 0.1)]
+        rel material:binding = </Root/Looks/PlasticGreen>
+        bool physics:collisionEnabled = 1
+        float physics:mass = 0.001
+        double3 xformOp:translate = (0.4760, 0.0000, 5.2710)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+} 
