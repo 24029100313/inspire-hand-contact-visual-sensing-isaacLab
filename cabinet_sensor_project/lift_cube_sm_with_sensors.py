@@ -286,9 +286,20 @@ class ContactSensorManager:
         left_total = 0.0
         right_total = 0.0
         
+        print(f"🔍 Detailed Force Analysis (Object mass: 0.216kg, Expected gravity: ~2.1N):")
+        print("-" * 80)
+        
         for name, sensor in self.sensors.items():
             forces = sensor.data.net_forces_w[env_id]
             force_magnitude = torch.norm(forces).item()
+            
+            # 正确提取力分量 - 参考精确代码的实现
+            if forces.numel() >= 3:  # 确保有足够的元素
+                forces_np = forces.cpu().numpy().flatten()
+                fx, fy, fz = float(forces_np[0]), float(forces_np[1]), float(forces_np[2])
+            else:  # 如果数据不完整，使用0填充
+                fx, fy, fz = 0.0, 0.0, 0.0
+            
             total_force += force_magnitude
             
             # Separate statistics for left and right fingers
@@ -296,13 +307,37 @@ class ContactSensorManager:
                 left_total += force_magnitude
             elif "rightfinger" in name:
                 right_total += force_magnitude
+            
+            # Force anomaly detection
+            warning = ""
+            if force_magnitude > 10.0:  # High force warning
+                warning = " ⚠️ HIGH FORCE!"
+            elif force_magnitude > 20.0:  # Very high force
+                warning = " 🚨 EXCESSIVE FORCE!"
                 
-            print(f"{name}: Force vector={forces.cpu().numpy()}, Magnitude={force_magnitude:.3f}N")
+            print(f"{name}:")
+            print(f"  Force components: fx={fx:7.3f}N, fy={fy:7.3f}N, fz={fz:7.3f}N")
+            print(f"  Total magnitude:  {force_magnitude:7.3f}N{warning}")
+            print(f"  Dominant axis:    {'X' if abs(fx) > abs(fy) and abs(fx) > abs(fz) else 'Y' if abs(fy) > abs(fz) else 'Z'}")
+            print()
         
         print(f"📊 Statistics Summary:")
         print(f"   Left finger total force: {left_total:.3f}N")
         print(f"   Right finger total force: {right_total:.3f}N") 
         print(f"   Gripper total force: {total_force:.3f}N")
+        
+        # Anomaly analysis
+        if total_force > 20.0:
+            print(f"🚨 FORCE ANOMALY DETECTED!")
+            print(f"   Current total: {total_force:.1f}N")
+            print(f"   Expected for 216g object: ~4-8N (including safety factor)")
+            print(f"   Ratio: {total_force/2.1:.1f}x theoretical gravity")
+            print(f"💡 Possible causes:")
+            print(f"   - Excessive gripper stiffness")
+            print(f"   - Contact material properties too rigid")
+            print(f"   - Sensor configuration issues")
+            print(f"   - Simulation step size problems")
+        
         print(f"   Data type: Step-wise average over control period")
         print("-" * 60)
 
@@ -645,10 +680,10 @@ def create_custom_lift_env_cfg(usd_path: str, env_cfg: LiftEnvCfg) -> LiftEnvCfg
             ),
             "panda_hand": ImplicitActuatorCfg(
                 joint_names_expr=["panda_finger_joint.*"],
-                effort_limit=200.0,
+                effort_limit=20.0,    # 降低到20N (原200N太高)
                 velocity_limit=0.2,
-                stiffness=2e3,
-                damping=1e2,
+                stiffness=200.0,      # 降低刚度 (原2000太高)
+                damping=20.0,         # 降低阻尼 (原100太高)
             ),
         },
     )
