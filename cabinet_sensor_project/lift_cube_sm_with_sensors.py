@@ -286,7 +286,7 @@ class ContactSensorManager:
         left_total = 0.0
         right_total = 0.0
         
-        print(f"🔍 Detailed Force Analysis (Object mass: 0.216kg, Expected gravity: ~2.1N):")
+        print(f"🔍 Detailed Force Analysis (Object mass: 1.0kg, Expected gravity: ~9.8N):")
         print("-" * 80)
         
         for name, sensor in self.sensors.items():
@@ -327,11 +327,11 @@ class ContactSensorManager:
         print(f"   Gripper total force: {total_force:.3f}N")
         
         # Anomaly analysis
-        if total_force > 20.0:
+        if total_force > 40.0:  # Adjusted threshold for 1kg object
             print(f"🚨 FORCE ANOMALY DETECTED!")
             print(f"   Current total: {total_force:.1f}N")
-            print(f"   Expected for 216g object: ~4-8N (including safety factor)")
-            print(f"   Ratio: {total_force/2.1:.1f}x theoretical gravity")
+            print(f"   Expected for 1kg object: ~15-30N (including safety factor)")
+            print(f"   Ratio: {total_force/9.8:.1f}x theoretical gravity")
             print(f"💡 Possible causes:")
             print(f"   - Excessive gripper stiffness")
             print(f"   - Contact material properties too rigid")
@@ -540,80 +540,101 @@ class SensorForceVisualizer:
             # Get all sensor data
             all_sensor_data = self.sensor_manager.get_all_sensor_data()
             
-            # Extract left and right finger forces with proper mapping
-            left_forces = []
-            right_forces = []
+            # Extract left and right finger force components with proper mapping
+            left_force_components = []
+            right_force_components = []
+            left_magnitudes = []
+            right_magnitudes = []
             
-            # 按照传感器ID顺序获取力值
+            # 按照传感器ID顺序获取力分量
             for sensor_id in self.left_sensor_ids if self.has_display else range(1, 5):
                 left_sensor_name = f"panda_leftfinger_sensor_{sensor_id}"
                 if left_sensor_name in all_sensor_data:
-                    left_force = torch.norm(all_sensor_data[left_sensor_name][env_id]).cpu().numpy()
-                    left_forces.append(float(left_force))
+                    force_vector = all_sensor_data[left_sensor_name][env_id].cpu().numpy().flatten()
+                    if len(force_vector) >= 3:
+                        fx, fy, fz = float(force_vector[0]), float(force_vector[1]), float(force_vector[2])
+                        magnitude = float(torch.norm(all_sensor_data[left_sensor_name][env_id]).cpu().numpy())
+                    else:
+                        fx, fy, fz = 0.0, 0.0, 0.0
+                        magnitude = 0.0
+                    left_force_components.append([fx, fy, fz])
+                    left_magnitudes.append(magnitude)
                 else:
-                    left_forces.append(0.0)
+                    left_force_components.append([0.0, 0.0, 0.0])
+                    left_magnitudes.append(0.0)
                     
             for sensor_id in self.right_sensor_ids if self.has_display else range(1, 5):
                 right_sensor_name = f"panda_rightfinger_sensor_{sensor_id}"
                 if right_sensor_name in all_sensor_data:
-                    right_force = torch.norm(all_sensor_data[right_sensor_name][env_id]).cpu().numpy()
-                    right_forces.append(float(right_force))
+                    force_vector = all_sensor_data[right_sensor_name][env_id].cpu().numpy().flatten()
+                    if len(force_vector) >= 3:
+                        fx, fy, fz = float(force_vector[0]), float(force_vector[1]), float(force_vector[2])
+                        magnitude = float(torch.norm(all_sensor_data[right_sensor_name][env_id]).cpu().numpy())
+                    else:
+                        fx, fy, fz = 0.0, 0.0, 0.0
+                        magnitude = 0.0
+                    right_force_components.append([fx, fy, fz])
+                    right_magnitudes.append(magnitude)
                 else:
-                    right_forces.append(0.0)
+                    right_force_components.append([0.0, 0.0, 0.0])
+                    right_magnitudes.append(0.0)
             
             if self.has_display:
                 # Update graphical visualization
-                for i, (rect, text, force, sensor_id) in enumerate(zip(self.left_rects, self.left_texts, left_forces, self.left_sensor_ids)):
-                    normalized_force = min(force / self.max_force, 1.0)
-                    if force > 0.1:
+                for i, (rect, text, force_comp, magnitude, sensor_id) in enumerate(zip(self.left_rects, self.left_texts, left_force_components, left_magnitudes, self.left_sensor_ids)):
+                    normalized_force = min(magnitude / self.max_force, 1.0)
+                    if magnitude > 0.1:
                         color = plt.cm.Blues(0.4 + normalized_force * 0.6)
                     else:
                         color = 'lightblue'
                     rect.set_facecolor(color)
-                    text.set_text(f'{force:.2f} N')
+                    fx, fy, fz = force_comp
+                    text.set_text(f'[{fx:.1f},{fy:.1f},{fz:.1f}]')
                     text.set_color('white' if normalized_force > 0.6 else 'darkblue')
                 
-                for i, (rect, text, force, sensor_id) in enumerate(zip(self.right_rects, self.right_texts, right_forces, self.right_sensor_ids)):
-                    normalized_force = min(force / self.max_force, 1.0)
-                    if force > 0.1:
+                for i, (rect, text, force_comp, magnitude, sensor_id) in enumerate(zip(self.right_rects, self.right_texts, right_force_components, right_magnitudes, self.right_sensor_ids)):
+                    normalized_force = min(magnitude / self.max_force, 1.0)
+                    if magnitude > 0.1:
                         color = plt.cm.Reds(0.4 + normalized_force * 0.6)
                     else:
                         color = 'lightcoral'
                     rect.set_facecolor(color)
-                    text.set_text(f'{force:.2f} N')
+                    fx, fy, fz = force_comp
+                    text.set_text(f'[{fx:.1f},{fy:.1f},{fz:.1f}]')
                     text.set_color('white' if normalized_force > 0.6 else 'darkred')
                 
-                max_left = max(left_forces) if left_forces else 0.0
-                max_right = max(right_forces) if right_forces else 0.0
-                total_force = sum(left_forces) + sum(right_forces)
+                max_left = max(left_magnitudes) if left_magnitudes else 0.0
+                max_right = max(right_magnitudes) if right_magnitudes else 0.0
+                total_force = sum(left_magnitudes) + sum(right_magnitudes)
                 
-                self.fig.suptitle(f'Gripper Sensor Force (Step-wise Average) | Left Max: {max_left:.2f}N | Right Max: {max_right:.2f}N | Total Force: {total_force:.2f}N', 
+                self.fig.suptitle(f'Gripper Sensor Force Components [fx,fy,fz] | Left Max: {max_left:.2f}N | Right Max: {max_right:.2f}N | Total: {total_force:.2f}N', 
                                  fontsize=14, fontweight='bold')
                 
                 self.fig.canvas.draw()
                 self.fig.canvas.flush_events()
             else:
-                # Text-based visualization with clearer layout
-                max_left = max(left_forces) if left_forces else 0.0
-                max_right = max(right_forces) if right_forces else 0.0
-                total_force = sum(left_forces) + sum(right_forces)
+                # Text-based visualization with force components
+                max_left = max(left_magnitudes) if left_magnitudes else 0.0
+                max_right = max(right_magnitudes) if right_magnitudes else 0.0
+                total_force = sum(left_magnitudes) + sum(right_magnitudes)
                 
                 print("\n" + "="*80)
-                print(f"📊 Gripper Sensor Force (Step-wise Average) | Total Force: {total_force:.2f}N")
+                print(f"📊 Gripper Sensor Force Components [fx,fy,fz] | Total Force: {total_force:.2f}N")
                 print("="*80)
-                print("Left Finger Sensors - Average Force (Inner side faces object):")
-                print(f"  Sensor 1 (Upper-Outer): {left_forces[0]:6.2f}N    Sensor 2 (Upper-Inner): {left_forces[1]:6.2f}N")
-                print(f"  Sensor 3 (Lower-Outer): {left_forces[2]:6.2f}N    Sensor 4 (Lower-Inner): {left_forces[3]:6.2f}N")
+                print("Left Finger Sensors - Force Components [fx,fy,fz]:")
+                for i, (force_comp, magnitude) in enumerate(zip(left_force_components, left_magnitudes)):
+                    fx, fy, fz = force_comp
+                    print(f"  Sensor {i+1}: [{fx:6.2f},{fy:6.2f},{fz:6.2f}] | Mag: {magnitude:6.2f}N")
                 print(f"  Max: {max_left:.2f}N")
                 print()
-                print("Right Finger Sensors - Average Force (Inner side faces object):")
-                print(f"  Sensor 1 (Upper-Inner): {right_forces[0]:6.2f}N    Sensor 2 (Upper-Outer): {right_forces[1]:6.2f}N")
-                print(f"  Sensor 3 (Lower-Inner): {right_forces[2]:6.2f}N    Sensor 4 (Lower-Outer): {right_forces[3]:6.2f}N")
+                print("Right Finger Sensors - Force Components [fx,fy,fz]:")
+                for i, (force_comp, magnitude) in enumerate(zip(right_force_components, right_magnitudes)):
+                    fx, fy, fz = force_comp
+                    print(f"  Sensor {i+1}: [{fx:6.2f},{fy:6.2f},{fz:6.2f}] | Mag: {magnitude:6.2f}N")
                 print(f"  Max: {max_right:.2f}N")
                 print()
-                print("💡 Note: Inner=Facing object, Outer=Facing outward, Up=Upper part, Down=Lower part")
+                print("💡 Format: [fx,fy,fz] in Newtons | Mag = Force magnitude")
                 print("📈 Data type: Step-wise average (non-instantaneous peak)")
-                print("⏱️ Average window: Average force value over the recent control cycle")
                 
         except Exception as e:
             print(f"⚠️ 可视化更新错误: {e}")
@@ -680,10 +701,10 @@ def create_custom_lift_env_cfg(usd_path: str, env_cfg: LiftEnvCfg) -> LiftEnvCfg
             ),
             "panda_hand": ImplicitActuatorCfg(
                 joint_names_expr=["panda_finger_joint.*"],
-                effort_limit=20.0,    # 降低到20N (原200N太高)
+                effort_limit=20.0,    # 恢复到20N
                 velocity_limit=0.2,
-                stiffness=200.0,      # 降低刚度 (原2000太高)
-                damping=20.0,         # 降低阻尼 (原100太高)
+                stiffness=200.0,      # 恢复到200
+                damping=20.0,         # 恢复到20
             ),
         },
     )
@@ -752,6 +773,12 @@ def main():
     # Only modify the robot's USD path, keep other configurations unchanged
     env_cfg.scene.robot.spawn.usd_path = usd_path
     env_cfg.scene.robot.spawn.activate_contact_sensors = True
+    
+    # Override object mass properties - set cube mass to 1.0 kg for testing
+    from isaaclab.sim import MassPropertiesCfg
+    env_cfg.scene.object.spawn.mass_props = MassPropertiesCfg(mass=1.0)  # 1 kg instead of original 0.216 kg
+    print(f"⚖️ Object mass overridden: 1.0 kg (original was 0.216 kg)")
+    print(f"📊 Expected grip force: ~10N (gravity) + ~5-15N (safety factor) = ~15-25N total")
     
     # Add sensor configurations
     sensor_names = [
