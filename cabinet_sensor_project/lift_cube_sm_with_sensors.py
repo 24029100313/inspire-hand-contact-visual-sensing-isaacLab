@@ -286,7 +286,7 @@ class ContactSensorManager:
         left_total = 0.0
         right_total = 0.0
         
-        print(f"🔍 Detailed Force Analysis (Object mass: 1.0kg, Expected gravity: ~9.8N):")
+        print(f" Detailed Force Analysis (Object mass: 1.0kg, Expected gravity: ~9.8N):")
         print("-" * 80)
         
         for name, sensor in self.sensors.items():
@@ -311,9 +311,9 @@ class ContactSensorManager:
             # Force anomaly detection
             warning = ""
             if force_magnitude > 10.0:  # High force warning
-                warning = " ⚠️ HIGH FORCE!"
+                warning = "  HIGH FORCE!"
             elif force_magnitude > 20.0:  # Very high force
-                warning = " 🚨 EXCESSIVE FORCE!"
+                warning = "  EXCESSIVE FORCE!"
                 
             print(f"{name}:")
             print(f"  Force components: fx={fx:7.3f}N, fy={fy:7.3f}N, fz={fz:7.3f}N")
@@ -321,18 +321,18 @@ class ContactSensorManager:
             print(f"  Dominant axis:    {'X' if abs(fx) > abs(fy) and abs(fx) > abs(fz) else 'Y' if abs(fy) > abs(fz) else 'Z'}")
             print()
         
-        print(f"📊 Statistics Summary:")
+        print(f" Statistics Summary:")
         print(f"   Left finger total force: {left_total:.3f}N")
         print(f"   Right finger total force: {right_total:.3f}N") 
         print(f"   Gripper total force: {total_force:.3f}N")
         
         # Anomaly analysis
         if total_force > 40.0:  # Adjusted threshold for 1kg object
-            print(f"🚨 FORCE ANOMALY DETECTED!")
+            print(f" FORCE ANOMALY DETECTED!")
             print(f"   Current total: {total_force:.1f}N")
             print(f"   Expected for 1kg object: ~15-30N (including safety factor)")
             print(f"   Ratio: {total_force/9.8:.1f}x theoretical gravity")
-            print(f"💡 Possible causes:")
+            print(f" Possible causes:")
             print(f"   - Excessive gripper stiffness")
             print(f"   - Contact material properties too rigid")
             print(f"   - Sensor configuration issues")
@@ -352,13 +352,13 @@ class SensorForceVisualizer:
         # Set matplotlib backend to ensure proper display
         import matplotlib
         
-        print("🔍 配置matplotlib后端...")
+        print(" 配置matplotlib后端...")
         
         # Set DISPLAY if not set properly
         import os
         if not os.environ.get('DISPLAY'):
             os.environ['DISPLAY'] = ':1'
-            print("📺 设置DISPLAY=:1")
+            print("设置DISPLAY=:1")
         
         # Only use Qt5Agg backend (most stable for Isaac Sim)
         try:
@@ -370,21 +370,21 @@ class SensorForceVisualizer:
             test_fig = plt.figure()
             plt.close(test_fig)
             
-            print("✅ 成功设置Qt5Agg后端")
+            print(" 成功设置Qt5Agg后端")
             backend_set = True
             
         except ImportError as e:
-            print(f"❌ Qt5Agg后端缺少依赖: {e}")
-            print("💡 请在Isaac Sim Python环境中安装PyQt5:")
+            print(f" Qt5Agg后端缺少依赖: {e}")
+            print(" 请在Isaac Sim Python环境中安装PyQt5:")
             print("   ./isaaclab.sh -p -m pip install PyQt5")
             backend_set = False
             
         except Exception as e:
-            print(f"❌ Qt5Agg后端失败: {e}")
+            print(f" Qt5Agg后端失败: {e}")
             backend_set = False
         
         if not backend_set:
-            print("🔄 切换到文本输出模式...")
+            print(" 切换到文本输出模式...")
             self.has_display = False
         
         if self.has_display:
@@ -517,21 +517,21 @@ class SensorForceVisualizer:
                 self.fig.canvas.draw()
                 self.fig.canvas.flush_events()
                 
-                print("✅ Sensor visualization window created!")
-                print("📋 Sensor layout description:")
+                print(" Sensor visualization window created!")
+                print(" Sensor layout description:")
                 print("   Left finger: Blue border | Right finger: Red border")
                 print("   Upper-Outer/Upper-Inner/Lower-Outer/Lower-Inner show sensor positions on finger")
                 print("   Inner: Side facing the object")
                 print("   Outer: Side facing outward")
-                print("💡 Tip: If you can't see the window, try using Alt+Tab to switch windows")
+                print(" Tip: If you can't see the window, try using Alt+Tab to switch windows")
                 
             except Exception as e:
-                print(f"❌ 无法创建图形窗口: {e}")
-                print("🔄 切换到文本输出模式...")
+                print(f" 无法创建图形窗口: {e}")
+                print(" 切换到文本输出模式...")
                 self.has_display = False
         
         if not self.has_display:
-            print("📊 使用文本输出模式显示传感器数据")
+            print("使用文本输出模式显示传感器数据")
             print("=" * 80)
     
     def update_visualization(self, env_id: int = 0):
@@ -619,7 +619,7 @@ class SensorForceVisualizer:
                 total_force = sum(left_magnitudes) + sum(right_magnitudes)
                 
                 print("\n" + "="*80)
-                print(f"📊 Gripper Sensor Force Components [fx,fy,fz] | Total Force: {total_force:.2f}N")
+                print(f"Gripper Sensor Force Components [fx,fy,fz] | Total Force: {total_force:.2f}N")
                 print("="*80)
                 print("Left Finger Sensors - Force Components [fx,fy,fz]:")
                 for i, (force_comp, magnitude) in enumerate(zip(left_force_components, left_magnitudes)):
@@ -633,11 +633,11 @@ class SensorForceVisualizer:
                     print(f"  Sensor {i+1}: [{fx:6.2f},{fy:6.2f},{fz:6.2f}] | Mag: {magnitude:6.2f}N")
                 print(f"  Max: {max_right:.2f}N")
                 print()
-                print("💡 Format: [fx,fy,fz] in Newtons | Mag = Force magnitude")
-                print("📈 Data type: Step-wise average (non-instantaneous peak)")
+                print(" Format: [fx,fy,fz] in Newtons | Mag = Force magnitude")
+                print("Data type: Step-wise average (non-instantaneous peak)")
                 
         except Exception as e:
-            print(f"⚠️ 可视化更新错误: {e}")
+            print(f" 可视化更新错误: {e}")
     
     def close(self):
         """Close the matplotlib windows."""
@@ -777,8 +777,8 @@ def main():
     # Override object mass properties - set cube mass to 1.0 kg for testing
     from isaaclab.sim import MassPropertiesCfg
     env_cfg.scene.object.spawn.mass_props = MassPropertiesCfg(mass=1.0)  # 1 kg instead of original 0.216 kg
-    print(f"⚖️ Object mass overridden: 1.0 kg (original was 0.216 kg)")
-    print(f"📊 Expected grip force: ~10N (gravity) + ~5-15N (safety factor) = ~15-25N total")
+    print(f"Object mass overridden: 1.0 kg (original was 0.216 kg)")
+    print(f"Expected grip force: ~10N (gravity) + ~5-15N (safety factor) = ~15-25N total")
     
     # Add sensor configurations
     sensor_names = [
@@ -804,7 +804,7 @@ def main():
     
     # Print simulation and sensor configuration information
     control_dt = env_cfg.sim.dt * env_cfg.decimation
-    print(f"📊 Simulation Configuration:")
+    print(f"Simulation Configuration:")
     print(f"   Simulation step (sim.dt): {env_cfg.sim.dt:.4f}s")
     print(f"   Control frequency (decimation): {env_cfg.decimation}")
     print(f"   Control period: {control_dt:.4f}s ({1/control_dt:.1f} Hz)")
@@ -841,12 +841,12 @@ def main():
     sensor_visualizer = SensorForceVisualizer(sensor_manager)
     visualization_interval = 10  # Update visualization every 10 steps
     
-    print("🔍 Finding sensor visualization window:")
+    print("Finding sensor visualization window:")
     print("1. Check if a new matplotlib window appears in the taskbar")
     print("2. Use Alt+Tab to switch windows to find it")
     print("3. The window title should be 'Figure 1' or contain 'Gripper Sensor Force Visualization'")
     print("4. If you can't see it, try unblocking pop-up windows")
-    print("⏳ Simulating in 3 seconds...")
+    print(" Simulating in 3 seconds...")
     
     import time
     time.sleep(3)  # Give user time to find the window

@@ -6,7 +6,7 @@
 ## 文件结构
 ```
 cabinet_sensor_project/
-├── panda_arm_hand_with_sensors.urdf          # 修改后的URDF文件（含8个传感器）
+├── panda_arm_hand_with_sensors_bright_green.urdf          # 修改后的URDF文件（含8个传感器）
 ├── lift_cube_sm_with_sensors.py              # 带传感器的抓取演示程序
 ├── run_lift_with_sensors.sh                  # 启动脚本
 ├── URDF_Sensor_Modification_Guide.md         # URDF修改说明
