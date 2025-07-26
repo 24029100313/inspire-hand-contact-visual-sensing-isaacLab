@@ -1,9 +1,9 @@
-# Isaac Lab Asset Configuration - Inspire Hand with Ring Force Sensor 1 Pads
+# Isaac Lab Asset Configuration - Inspire Hand with Little Force Sensor 1 Pads
 # Generated from: inspire_hand_processed_with_pads.urdf
-# Creation date: 2025-07-26 22:50:45
-# Total contact points: 552 (including 80 ring1 pads)
+# Creation date: 2025-07-26 22:58:48
+# Total contact points: 632 (including 80 little1 pads)
 
-inspire_hand_with_ring1_pads:
+inspire_hand_with_little1_pads:
   class_type: RigidObject
   
   # USD file path
@@ -93,6 +93,17 @@ inspire_hand_with_ring1_pads:
       grid_size: [8, 10]
       pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
       color: "magenta"
+      
+    # Little1 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, yellow)
+    little_sensor_1_pads:
+      prim_path: "/inspire_hand_with_sensors/little_sensor_1_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 80
+      grid_size: [8, 10]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "yellow"
   
   # Summary
   total_sensors:
@@ -102,9 +113,10 @@ inspire_hand_with_ring1_pads:
     thumb3_pads: 96
     index1_pads: 80
     middle1_pads: 80
-    ring1_pads: 80  # NEW: Ring force sensor 1
-    total_contact_points: 552  # 112+96+8+96+80+80+80
-    force_sensors: 8
+    ring1_pads: 80
+    little1_pads: 80  # NEW: Little force sensor 1
+    total_contact_points: 632  # 112+96+8+96+80+80+80+80
+    force_sensors: 9
     uniform_thickness: 0.6  # mm
     
   # Sensor specifications
