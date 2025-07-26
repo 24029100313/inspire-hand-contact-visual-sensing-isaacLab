@@ -133,7 +133,7 @@ File structure:
   <link name="palm_sensor_pad_001">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -141,7 +141,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -153,14 +153,14 @@ File structure:
   <joint name="palm_sensor_pad_001_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_001"/>
-    <origin rpy="0 0 0" xyz="-0.019500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 2 (位置: 第2列第1行) -->
   <link name="palm_sensor_pad_002">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -168,7 +168,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -180,14 +180,14 @@ File structure:
   <joint name="palm_sensor_pad_002_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_002"/>
-    <origin rpy="0 0 0" xyz="-0.016500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 3 (位置: 第3列第1行) -->
   <link name="palm_sensor_pad_003">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -195,7 +195,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -207,14 +207,14 @@ File structure:
   <joint name="palm_sensor_pad_003_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_003"/>
-    <origin rpy="0 0 0" xyz="-0.013500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 4 (位置: 第4列第1行) -->
   <link name="palm_sensor_pad_004">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -222,7 +222,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -234,14 +234,14 @@ File structure:
   <joint name="palm_sensor_pad_004_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_004"/>
-    <origin rpy="0 0 0" xyz="-0.010500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 5 (位置: 第5列第1行) -->
   <link name="palm_sensor_pad_005">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -249,7 +249,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -261,14 +261,14 @@ File structure:
   <joint name="palm_sensor_pad_005_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_005"/>
-    <origin rpy="0 0 0" xyz="-0.007500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 6 (位置: 第6列第1行) -->
   <link name="palm_sensor_pad_006">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -276,7 +276,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -288,14 +288,14 @@ File structure:
   <joint name="palm_sensor_pad_006_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_006"/>
-    <origin rpy="0 0 0" xyz="-0.004500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 7 (位置: 第7列第1行) -->
   <link name="palm_sensor_pad_007">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -303,7 +303,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -315,14 +315,14 @@ File structure:
   <joint name="palm_sensor_pad_007_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_007"/>
-    <origin rpy="0 0 0" xyz="-0.001500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 8 (位置: 第8列第1行) -->
   <link name="palm_sensor_pad_008">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -330,7 +330,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -342,14 +342,14 @@ File structure:
   <joint name="palm_sensor_pad_008_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_008"/>
-    <origin rpy="0 0 0" xyz="0.001500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 9 (位置: 第9列第1行) -->
   <link name="palm_sensor_pad_009">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -357,7 +357,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -369,14 +369,14 @@ File structure:
   <joint name="palm_sensor_pad_009_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_009"/>
-    <origin rpy="0 0 0" xyz="0.004500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 10 (位置: 第10列第1行) -->
   <link name="palm_sensor_pad_010">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -384,7 +384,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -396,14 +396,14 @@ File structure:
   <joint name="palm_sensor_pad_010_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_010"/>
-    <origin rpy="0 0 0" xyz="0.007500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 11 (位置: 第11列第1行) -->
   <link name="palm_sensor_pad_011">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -411,7 +411,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -423,14 +423,14 @@ File structure:
   <joint name="palm_sensor_pad_011_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_011"/>
-    <origin rpy="0 0 0" xyz="0.010500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 12 (位置: 第12列第1行) -->
   <link name="palm_sensor_pad_012">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -438,7 +438,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -450,14 +450,14 @@ File structure:
   <joint name="palm_sensor_pad_012_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_012"/>
-    <origin rpy="0 0 0" xyz="0.013500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 13 (位置: 第13列第1行) -->
   <link name="palm_sensor_pad_013">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -465,7 +465,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -477,14 +477,14 @@ File structure:
   <joint name="palm_sensor_pad_013_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_013"/>
-    <origin rpy="0 0 0" xyz="0.016500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 14 (位置: 第14列第1行) -->
   <link name="palm_sensor_pad_014">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -492,7 +492,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -504,14 +504,14 @@ File structure:
   <joint name="palm_sensor_pad_014_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_014"/>
-    <origin rpy="0 0 0" xyz="0.019500 -0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 -0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 15 (位置: 第1列第2行) -->
   <link name="palm_sensor_pad_015">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -519,7 +519,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -531,14 +531,14 @@ File structure:
   <joint name="palm_sensor_pad_015_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_015"/>
-    <origin rpy="0 0 0" xyz="-0.019500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 16 (位置: 第2列第2行) -->
   <link name="palm_sensor_pad_016">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -546,7 +546,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -558,14 +558,14 @@ File structure:
   <joint name="palm_sensor_pad_016_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_016"/>
-    <origin rpy="0 0 0" xyz="-0.016500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 17 (位置: 第3列第2行) -->
   <link name="palm_sensor_pad_017">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -573,7 +573,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -585,14 +585,14 @@ File structure:
   <joint name="palm_sensor_pad_017_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_017"/>
-    <origin rpy="0 0 0" xyz="-0.013500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 18 (位置: 第4列第2行) -->
   <link name="palm_sensor_pad_018">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -600,7 +600,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -612,14 +612,14 @@ File structure:
   <joint name="palm_sensor_pad_018_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_018"/>
-    <origin rpy="0 0 0" xyz="-0.010500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 19 (位置: 第5列第2行) -->
   <link name="palm_sensor_pad_019">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -627,7 +627,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -639,14 +639,14 @@ File structure:
   <joint name="palm_sensor_pad_019_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_019"/>
-    <origin rpy="0 0 0" xyz="-0.007500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 20 (位置: 第6列第2行) -->
   <link name="palm_sensor_pad_020">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -654,7 +654,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -666,14 +666,14 @@ File structure:
   <joint name="palm_sensor_pad_020_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_020"/>
-    <origin rpy="0 0 0" xyz="-0.004500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 21 (位置: 第7列第2行) -->
   <link name="palm_sensor_pad_021">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -681,7 +681,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -693,14 +693,14 @@ File structure:
   <joint name="palm_sensor_pad_021_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_021"/>
-    <origin rpy="0 0 0" xyz="-0.001500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 22 (位置: 第8列第2行) -->
   <link name="palm_sensor_pad_022">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -708,7 +708,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -720,14 +720,14 @@ File structure:
   <joint name="palm_sensor_pad_022_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_022"/>
-    <origin rpy="0 0 0" xyz="0.001500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 23 (位置: 第9列第2行) -->
   <link name="palm_sensor_pad_023">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -735,7 +735,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -747,14 +747,14 @@ File structure:
   <joint name="palm_sensor_pad_023_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_023"/>
-    <origin rpy="0 0 0" xyz="0.004500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 24 (位置: 第10列第2行) -->
   <link name="palm_sensor_pad_024">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -762,7 +762,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -774,14 +774,14 @@ File structure:
   <joint name="palm_sensor_pad_024_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_024"/>
-    <origin rpy="0 0 0" xyz="0.007500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 25 (位置: 第11列第2行) -->
   <link name="palm_sensor_pad_025">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -789,7 +789,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -801,14 +801,14 @@ File structure:
   <joint name="palm_sensor_pad_025_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_025"/>
-    <origin rpy="0 0 0" xyz="0.010500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 26 (位置: 第12列第2行) -->
   <link name="palm_sensor_pad_026">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -816,7 +816,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -828,14 +828,14 @@ File structure:
   <joint name="palm_sensor_pad_026_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_026"/>
-    <origin rpy="0 0 0" xyz="0.013500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 27 (位置: 第13列第2行) -->
   <link name="palm_sensor_pad_027">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -843,7 +843,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -855,14 +855,14 @@ File structure:
   <joint name="palm_sensor_pad_027_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_027"/>
-    <origin rpy="0 0 0" xyz="0.016500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 28 (位置: 第14列第2行) -->
   <link name="palm_sensor_pad_028">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -870,7 +870,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -882,14 +882,14 @@ File structure:
   <joint name="palm_sensor_pad_028_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_028"/>
-    <origin rpy="0 0 0" xyz="0.019500 -0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 -0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 29 (位置: 第1列第3行) -->
   <link name="palm_sensor_pad_029">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -897,7 +897,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -909,14 +909,14 @@ File structure:
   <joint name="palm_sensor_pad_029_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_029"/>
-    <origin rpy="0 0 0" xyz="-0.019500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 30 (位置: 第2列第3行) -->
   <link name="palm_sensor_pad_030">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -924,7 +924,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -936,14 +936,14 @@ File structure:
   <joint name="palm_sensor_pad_030_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_030"/>
-    <origin rpy="0 0 0" xyz="-0.016500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 31 (位置: 第3列第3行) -->
   <link name="palm_sensor_pad_031">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -951,7 +951,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -963,14 +963,14 @@ File structure:
   <joint name="palm_sensor_pad_031_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_031"/>
-    <origin rpy="0 0 0" xyz="-0.013500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 32 (位置: 第4列第3行) -->
   <link name="palm_sensor_pad_032">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -978,7 +978,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -990,14 +990,14 @@ File structure:
   <joint name="palm_sensor_pad_032_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_032"/>
-    <origin rpy="0 0 0" xyz="-0.010500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 33 (位置: 第5列第3行) -->
   <link name="palm_sensor_pad_033">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1005,7 +1005,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1017,14 +1017,14 @@ File structure:
   <joint name="palm_sensor_pad_033_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_033"/>
-    <origin rpy="0 0 0" xyz="-0.007500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 34 (位置: 第6列第3行) -->
   <link name="palm_sensor_pad_034">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1032,7 +1032,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1044,14 +1044,14 @@ File structure:
   <joint name="palm_sensor_pad_034_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_034"/>
-    <origin rpy="0 0 0" xyz="-0.004500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 35 (位置: 第7列第3行) -->
   <link name="palm_sensor_pad_035">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1059,7 +1059,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1071,14 +1071,14 @@ File structure:
   <joint name="palm_sensor_pad_035_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_035"/>
-    <origin rpy="0 0 0" xyz="-0.001500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 36 (位置: 第8列第3行) -->
   <link name="palm_sensor_pad_036">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1086,7 +1086,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1098,14 +1098,14 @@ File structure:
   <joint name="palm_sensor_pad_036_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_036"/>
-    <origin rpy="0 0 0" xyz="0.001500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 37 (位置: 第9列第3行) -->
   <link name="palm_sensor_pad_037">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1113,7 +1113,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1125,14 +1125,14 @@ File structure:
   <joint name="palm_sensor_pad_037_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_037"/>
-    <origin rpy="0 0 0" xyz="0.004500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 38 (位置: 第10列第3行) -->
   <link name="palm_sensor_pad_038">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1140,7 +1140,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1152,14 +1152,14 @@ File structure:
   <joint name="palm_sensor_pad_038_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_038"/>
-    <origin rpy="0 0 0" xyz="0.007500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 39 (位置: 第11列第3行) -->
   <link name="palm_sensor_pad_039">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1167,7 +1167,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1179,14 +1179,14 @@ File structure:
   <joint name="palm_sensor_pad_039_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_039"/>
-    <origin rpy="0 0 0" xyz="0.010500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 40 (位置: 第12列第3行) -->
   <link name="palm_sensor_pad_040">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1194,7 +1194,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1206,14 +1206,14 @@ File structure:
   <joint name="palm_sensor_pad_040_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_040"/>
-    <origin rpy="0 0 0" xyz="0.013500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 41 (位置: 第13列第3行) -->
   <link name="palm_sensor_pad_041">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1221,7 +1221,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1233,14 +1233,14 @@ File structure:
   <joint name="palm_sensor_pad_041_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_041"/>
-    <origin rpy="0 0 0" xyz="0.016500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 42 (位置: 第14列第3行) -->
   <link name="palm_sensor_pad_042">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1248,7 +1248,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1260,14 +1260,14 @@ File structure:
   <joint name="palm_sensor_pad_042_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_042"/>
-    <origin rpy="0 0 0" xyz="0.019500 -0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 -0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 43 (位置: 第1列第4行) -->
   <link name="palm_sensor_pad_043">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1275,7 +1275,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1287,14 +1287,14 @@ File structure:
   <joint name="palm_sensor_pad_043_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_043"/>
-    <origin rpy="0 0 0" xyz="-0.019500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 44 (位置: 第2列第4行) -->
   <link name="palm_sensor_pad_044">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1302,7 +1302,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1314,14 +1314,14 @@ File structure:
   <joint name="palm_sensor_pad_044_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_044"/>
-    <origin rpy="0 0 0" xyz="-0.016500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 45 (位置: 第3列第4行) -->
   <link name="palm_sensor_pad_045">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1329,7 +1329,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1341,14 +1341,14 @@ File structure:
   <joint name="palm_sensor_pad_045_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_045"/>
-    <origin rpy="0 0 0" xyz="-0.013500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 46 (位置: 第4列第4行) -->
   <link name="palm_sensor_pad_046">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1356,7 +1356,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1368,14 +1368,14 @@ File structure:
   <joint name="palm_sensor_pad_046_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_046"/>
-    <origin rpy="0 0 0" xyz="-0.010500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 47 (位置: 第5列第4行) -->
   <link name="palm_sensor_pad_047">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1383,7 +1383,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1395,14 +1395,14 @@ File structure:
   <joint name="palm_sensor_pad_047_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_047"/>
-    <origin rpy="0 0 0" xyz="-0.007500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 48 (位置: 第6列第4行) -->
   <link name="palm_sensor_pad_048">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1410,7 +1410,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1422,14 +1422,14 @@ File structure:
   <joint name="palm_sensor_pad_048_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_048"/>
-    <origin rpy="0 0 0" xyz="-0.004500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 49 (位置: 第7列第4行) -->
   <link name="palm_sensor_pad_049">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1437,7 +1437,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1449,14 +1449,14 @@ File structure:
   <joint name="palm_sensor_pad_049_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_049"/>
-    <origin rpy="0 0 0" xyz="-0.001500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 50 (位置: 第8列第4行) -->
   <link name="palm_sensor_pad_050">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1464,7 +1464,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1476,14 +1476,14 @@ File structure:
   <joint name="palm_sensor_pad_050_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_050"/>
-    <origin rpy="0 0 0" xyz="0.001500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 51 (位置: 第9列第4行) -->
   <link name="palm_sensor_pad_051">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1491,7 +1491,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1503,14 +1503,14 @@ File structure:
   <joint name="palm_sensor_pad_051_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_051"/>
-    <origin rpy="0 0 0" xyz="0.004500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 52 (位置: 第10列第4行) -->
   <link name="palm_sensor_pad_052">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1518,7 +1518,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1530,14 +1530,14 @@ File structure:
   <joint name="palm_sensor_pad_052_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_052"/>
-    <origin rpy="0 0 0" xyz="0.007500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 53 (位置: 第11列第4行) -->
   <link name="palm_sensor_pad_053">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1545,7 +1545,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1557,14 +1557,14 @@ File structure:
   <joint name="palm_sensor_pad_053_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_053"/>
-    <origin rpy="0 0 0" xyz="0.010500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 54 (位置: 第12列第4行) -->
   <link name="palm_sensor_pad_054">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1572,7 +1572,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1584,14 +1584,14 @@ File structure:
   <joint name="palm_sensor_pad_054_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_054"/>
-    <origin rpy="0 0 0" xyz="0.013500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 55 (位置: 第13列第4行) -->
   <link name="palm_sensor_pad_055">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1599,7 +1599,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1611,14 +1611,14 @@ File structure:
   <joint name="palm_sensor_pad_055_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_055"/>
-    <origin rpy="0 0 0" xyz="0.016500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 56 (位置: 第14列第4行) -->
   <link name="palm_sensor_pad_056">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1626,7 +1626,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1638,14 +1638,14 @@ File structure:
   <joint name="palm_sensor_pad_056_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_056"/>
-    <origin rpy="0 0 0" xyz="0.019500 -0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 -0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 57 (位置: 第1列第5行) -->
   <link name="palm_sensor_pad_057">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1653,7 +1653,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1665,14 +1665,14 @@ File structure:
   <joint name="palm_sensor_pad_057_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_057"/>
-    <origin rpy="0 0 0" xyz="-0.019500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 58 (位置: 第2列第5行) -->
   <link name="palm_sensor_pad_058">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1680,7 +1680,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1692,14 +1692,14 @@ File structure:
   <joint name="palm_sensor_pad_058_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_058"/>
-    <origin rpy="0 0 0" xyz="-0.016500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 59 (位置: 第3列第5行) -->
   <link name="palm_sensor_pad_059">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1707,7 +1707,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1719,14 +1719,14 @@ File structure:
   <joint name="palm_sensor_pad_059_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_059"/>
-    <origin rpy="0 0 0" xyz="-0.013500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 60 (位置: 第4列第5行) -->
   <link name="palm_sensor_pad_060">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1734,7 +1734,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1746,14 +1746,14 @@ File structure:
   <joint name="palm_sensor_pad_060_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_060"/>
-    <origin rpy="0 0 0" xyz="-0.010500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 61 (位置: 第5列第5行) -->
   <link name="palm_sensor_pad_061">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1761,7 +1761,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1773,14 +1773,14 @@ File structure:
   <joint name="palm_sensor_pad_061_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_061"/>
-    <origin rpy="0 0 0" xyz="-0.007500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 62 (位置: 第6列第5行) -->
   <link name="palm_sensor_pad_062">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1788,7 +1788,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1800,14 +1800,14 @@ File structure:
   <joint name="palm_sensor_pad_062_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_062"/>
-    <origin rpy="0 0 0" xyz="-0.004500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 63 (位置: 第7列第5行) -->
   <link name="palm_sensor_pad_063">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1815,7 +1815,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1827,14 +1827,14 @@ File structure:
   <joint name="palm_sensor_pad_063_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_063"/>
-    <origin rpy="0 0 0" xyz="-0.001500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 64 (位置: 第8列第5行) -->
   <link name="palm_sensor_pad_064">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1842,7 +1842,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1854,14 +1854,14 @@ File structure:
   <joint name="palm_sensor_pad_064_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_064"/>
-    <origin rpy="0 0 0" xyz="0.001500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 65 (位置: 第9列第5行) -->
   <link name="palm_sensor_pad_065">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1869,7 +1869,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1881,14 +1881,14 @@ File structure:
   <joint name="palm_sensor_pad_065_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_065"/>
-    <origin rpy="0 0 0" xyz="0.004500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 66 (位置: 第10列第5行) -->
   <link name="palm_sensor_pad_066">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1896,7 +1896,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1908,14 +1908,14 @@ File structure:
   <joint name="palm_sensor_pad_066_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_066"/>
-    <origin rpy="0 0 0" xyz="0.007500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 67 (位置: 第11列第5行) -->
   <link name="palm_sensor_pad_067">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1923,7 +1923,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1935,14 +1935,14 @@ File structure:
   <joint name="palm_sensor_pad_067_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_067"/>
-    <origin rpy="0 0 0" xyz="0.010500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 68 (位置: 第12列第5行) -->
   <link name="palm_sensor_pad_068">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1950,7 +1950,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1962,14 +1962,14 @@ File structure:
   <joint name="palm_sensor_pad_068_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_068"/>
-    <origin rpy="0 0 0" xyz="0.013500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 69 (位置: 第13列第5行) -->
   <link name="palm_sensor_pad_069">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -1977,7 +1977,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -1989,14 +1989,14 @@ File structure:
   <joint name="palm_sensor_pad_069_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_069"/>
-    <origin rpy="0 0 0" xyz="0.016500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 70 (位置: 第14列第5行) -->
   <link name="palm_sensor_pad_070">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2004,7 +2004,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2016,14 +2016,14 @@ File structure:
   <joint name="palm_sensor_pad_070_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_070"/>
-    <origin rpy="0 0 0" xyz="0.019500 0.001500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 0.001500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 71 (位置: 第1列第6行) -->
   <link name="palm_sensor_pad_071">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2031,7 +2031,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2043,14 +2043,14 @@ File structure:
   <joint name="palm_sensor_pad_071_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_071"/>
-    <origin rpy="0 0 0" xyz="-0.019500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 72 (位置: 第2列第6行) -->
   <link name="palm_sensor_pad_072">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2058,7 +2058,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2070,14 +2070,14 @@ File structure:
   <joint name="palm_sensor_pad_072_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_072"/>
-    <origin rpy="0 0 0" xyz="-0.016500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 73 (位置: 第3列第6行) -->
   <link name="palm_sensor_pad_073">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2085,7 +2085,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2097,14 +2097,14 @@ File structure:
   <joint name="palm_sensor_pad_073_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_073"/>
-    <origin rpy="0 0 0" xyz="-0.013500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 74 (位置: 第4列第6行) -->
   <link name="palm_sensor_pad_074">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2112,7 +2112,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2124,14 +2124,14 @@ File structure:
   <joint name="palm_sensor_pad_074_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_074"/>
-    <origin rpy="0 0 0" xyz="-0.010500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 75 (位置: 第5列第6行) -->
   <link name="palm_sensor_pad_075">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2139,7 +2139,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2151,14 +2151,14 @@ File structure:
   <joint name="palm_sensor_pad_075_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_075"/>
-    <origin rpy="0 0 0" xyz="-0.007500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 76 (位置: 第6列第6行) -->
   <link name="palm_sensor_pad_076">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2166,7 +2166,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2178,14 +2178,14 @@ File structure:
   <joint name="palm_sensor_pad_076_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_076"/>
-    <origin rpy="0 0 0" xyz="-0.004500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 77 (位置: 第7列第6行) -->
   <link name="palm_sensor_pad_077">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2193,7 +2193,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2205,14 +2205,14 @@ File structure:
   <joint name="palm_sensor_pad_077_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_077"/>
-    <origin rpy="0 0 0" xyz="-0.001500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 78 (位置: 第8列第6行) -->
   <link name="palm_sensor_pad_078">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2220,7 +2220,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2232,14 +2232,14 @@ File structure:
   <joint name="palm_sensor_pad_078_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_078"/>
-    <origin rpy="0 0 0" xyz="0.001500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 79 (位置: 第9列第6行) -->
   <link name="palm_sensor_pad_079">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2247,7 +2247,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2259,14 +2259,14 @@ File structure:
   <joint name="palm_sensor_pad_079_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_079"/>
-    <origin rpy="0 0 0" xyz="0.004500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 80 (位置: 第10列第6行) -->
   <link name="palm_sensor_pad_080">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2274,7 +2274,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2286,14 +2286,14 @@ File structure:
   <joint name="palm_sensor_pad_080_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_080"/>
-    <origin rpy="0 0 0" xyz="0.007500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 81 (位置: 第11列第6行) -->
   <link name="palm_sensor_pad_081">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2301,7 +2301,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2313,14 +2313,14 @@ File structure:
   <joint name="palm_sensor_pad_081_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_081"/>
-    <origin rpy="0 0 0" xyz="0.010500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 82 (位置: 第12列第6行) -->
   <link name="palm_sensor_pad_082">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2328,7 +2328,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2340,14 +2340,14 @@ File structure:
   <joint name="palm_sensor_pad_082_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_082"/>
-    <origin rpy="0 0 0" xyz="0.013500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 83 (位置: 第13列第6行) -->
   <link name="palm_sensor_pad_083">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2355,7 +2355,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2367,14 +2367,14 @@ File structure:
   <joint name="palm_sensor_pad_083_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_083"/>
-    <origin rpy="0 0 0" xyz="0.016500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 84 (位置: 第14列第6行) -->
   <link name="palm_sensor_pad_084">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2382,7 +2382,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2394,14 +2394,14 @@ File structure:
   <joint name="palm_sensor_pad_084_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_084"/>
-    <origin rpy="0 0 0" xyz="0.019500 0.004500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 0.004500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 85 (位置: 第1列第7行) -->
   <link name="palm_sensor_pad_085">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2409,7 +2409,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2421,14 +2421,14 @@ File structure:
   <joint name="palm_sensor_pad_085_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_085"/>
-    <origin rpy="0 0 0" xyz="-0.019500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 86 (位置: 第2列第7行) -->
   <link name="palm_sensor_pad_086">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2436,7 +2436,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2448,14 +2448,14 @@ File structure:
   <joint name="palm_sensor_pad_086_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_086"/>
-    <origin rpy="0 0 0" xyz="-0.016500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 87 (位置: 第3列第7行) -->
   <link name="palm_sensor_pad_087">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2463,7 +2463,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2475,14 +2475,14 @@ File structure:
   <joint name="palm_sensor_pad_087_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_087"/>
-    <origin rpy="0 0 0" xyz="-0.013500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 88 (位置: 第4列第7行) -->
   <link name="palm_sensor_pad_088">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2490,7 +2490,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2502,14 +2502,14 @@ File structure:
   <joint name="palm_sensor_pad_088_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_088"/>
-    <origin rpy="0 0 0" xyz="-0.010500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 89 (位置: 第5列第7行) -->
   <link name="palm_sensor_pad_089">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2517,7 +2517,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2529,14 +2529,14 @@ File structure:
   <joint name="palm_sensor_pad_089_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_089"/>
-    <origin rpy="0 0 0" xyz="-0.007500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 90 (位置: 第6列第7行) -->
   <link name="palm_sensor_pad_090">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2544,7 +2544,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2556,14 +2556,14 @@ File structure:
   <joint name="palm_sensor_pad_090_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_090"/>
-    <origin rpy="0 0 0" xyz="-0.004500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 91 (位置: 第7列第7行) -->
   <link name="palm_sensor_pad_091">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2571,7 +2571,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2583,14 +2583,14 @@ File structure:
   <joint name="palm_sensor_pad_091_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_091"/>
-    <origin rpy="0 0 0" xyz="-0.001500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 92 (位置: 第8列第7行) -->
   <link name="palm_sensor_pad_092">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2598,7 +2598,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2610,14 +2610,14 @@ File structure:
   <joint name="palm_sensor_pad_092_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_092"/>
-    <origin rpy="0 0 0" xyz="0.001500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 93 (位置: 第9列第7行) -->
   <link name="palm_sensor_pad_093">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2625,7 +2625,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2637,14 +2637,14 @@ File structure:
   <joint name="palm_sensor_pad_093_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_093"/>
-    <origin rpy="0 0 0" xyz="0.004500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 94 (位置: 第10列第7行) -->
   <link name="palm_sensor_pad_094">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2652,7 +2652,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2664,14 +2664,14 @@ File structure:
   <joint name="palm_sensor_pad_094_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_094"/>
-    <origin rpy="0 0 0" xyz="0.007500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 95 (位置: 第11列第7行) -->
   <link name="palm_sensor_pad_095">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2679,7 +2679,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2691,14 +2691,14 @@ File structure:
   <joint name="palm_sensor_pad_095_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_095"/>
-    <origin rpy="0 0 0" xyz="0.010500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 96 (位置: 第12列第7行) -->
   <link name="palm_sensor_pad_096">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2706,7 +2706,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2718,14 +2718,14 @@ File structure:
   <joint name="palm_sensor_pad_096_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_096"/>
-    <origin rpy="0 0 0" xyz="0.013500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 97 (位置: 第13列第7行) -->
   <link name="palm_sensor_pad_097">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2733,7 +2733,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2745,14 +2745,14 @@ File structure:
   <joint name="palm_sensor_pad_097_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_097"/>
-    <origin rpy="0 0 0" xyz="0.016500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 98 (位置: 第14列第7行) -->
   <link name="palm_sensor_pad_098">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2760,7 +2760,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2772,14 +2772,14 @@ File structure:
   <joint name="palm_sensor_pad_098_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_098"/>
-    <origin rpy="0 0 0" xyz="0.019500 0.007500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 0.007500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 99 (位置: 第1列第8行) -->
   <link name="palm_sensor_pad_099">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2787,7 +2787,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2799,14 +2799,14 @@ File structure:
   <joint name="palm_sensor_pad_099_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_099"/>
-    <origin rpy="0 0 0" xyz="-0.019500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.019500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 100 (位置: 第2列第8行) -->
   <link name="palm_sensor_pad_100">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2814,7 +2814,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2826,14 +2826,14 @@ File structure:
   <joint name="palm_sensor_pad_100_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_100"/>
-    <origin rpy="0 0 0" xyz="-0.016500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.016500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 101 (位置: 第3列第8行) -->
   <link name="palm_sensor_pad_101">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2841,7 +2841,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2853,14 +2853,14 @@ File structure:
   <joint name="palm_sensor_pad_101_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_101"/>
-    <origin rpy="0 0 0" xyz="-0.013500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.013500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 102 (位置: 第4列第8行) -->
   <link name="palm_sensor_pad_102">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2868,7 +2868,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2880,14 +2880,14 @@ File structure:
   <joint name="palm_sensor_pad_102_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_102"/>
-    <origin rpy="0 0 0" xyz="-0.010500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.010500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 103 (位置: 第5列第8行) -->
   <link name="palm_sensor_pad_103">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2895,7 +2895,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2907,14 +2907,14 @@ File structure:
   <joint name="palm_sensor_pad_103_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_103"/>
-    <origin rpy="0 0 0" xyz="-0.007500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.007500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 104 (位置: 第6列第8行) -->
   <link name="palm_sensor_pad_104">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2922,7 +2922,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2934,14 +2934,14 @@ File structure:
   <joint name="palm_sensor_pad_104_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_104"/>
-    <origin rpy="0 0 0" xyz="-0.004500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.004500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 105 (位置: 第7列第8行) -->
   <link name="palm_sensor_pad_105">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2949,7 +2949,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2961,14 +2961,14 @@ File structure:
   <joint name="palm_sensor_pad_105_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_105"/>
-    <origin rpy="0 0 0" xyz="-0.001500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="-0.001500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 106 (位置: 第8列第8行) -->
   <link name="palm_sensor_pad_106">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -2976,7 +2976,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -2988,14 +2988,14 @@ File structure:
   <joint name="palm_sensor_pad_106_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_106"/>
-    <origin rpy="0 0 0" xyz="0.001500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.001500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 107 (位置: 第9列第8行) -->
   <link name="palm_sensor_pad_107">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3003,7 +3003,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3015,14 +3015,14 @@ File structure:
   <joint name="palm_sensor_pad_107_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_107"/>
-    <origin rpy="0 0 0" xyz="0.004500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.004500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 108 (位置: 第10列第8行) -->
   <link name="palm_sensor_pad_108">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3030,7 +3030,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3042,14 +3042,14 @@ File structure:
   <joint name="palm_sensor_pad_108_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_108"/>
-    <origin rpy="0 0 0" xyz="0.007500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.007500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 109 (位置: 第11列第8行) -->
   <link name="palm_sensor_pad_109">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3057,7 +3057,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3069,14 +3069,14 @@ File structure:
   <joint name="palm_sensor_pad_109_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_109"/>
-    <origin rpy="0 0 0" xyz="0.010500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.010500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 110 (位置: 第12列第8行) -->
   <link name="palm_sensor_pad_110">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3084,7 +3084,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3096,14 +3096,14 @@ File structure:
   <joint name="palm_sensor_pad_110_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_110"/>
-    <origin rpy="0 0 0" xyz="0.013500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.013500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 111 (位置: 第13列第8行) -->
   <link name="palm_sensor_pad_111">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3111,7 +3111,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3123,14 +3123,14 @@ File structure:
   <joint name="palm_sensor_pad_111_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_111"/>
-    <origin rpy="0 0 0" xyz="0.016500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.016500 0.010500 0.000300"/>
   </joint>
 
   <!-- Palm传感器 pad 112 (位置: 第14列第8行) -->
   <link name="palm_sensor_pad_112">
     <visual>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
       <material name="sensor_green">
         <color rgba="0.0 1.0 0.0 1.0"/>
@@ -3138,7 +3138,7 @@ File structure:
     </visual>
     <collision>
       <geometry>
-        <box size="0.003000 0.003000 0.001500"/>
+        <box size="0.003000 0.003000 0.000600"/>
       </geometry>
     </collision>
     <inertial>
@@ -3150,7 +3150,7 @@ File structure:
   <joint name="palm_sensor_pad_112_joint" type="fixed">
     <parent link="palm_force_sensor"/>
     <child link="palm_sensor_pad_112"/>
-    <origin rpy="0 0 0" xyz="0.019500 0.010500 0.000750"/>
+    <origin rpy="0 0 0" xyz="0.019500 0.010500 0.000300"/>
   </joint>
 
   <!-- ==================== END PALM SENSOR PADS ==================== -->
@@ -9296,6 +9296,2170 @@ File structure:
       link="index_force_sensor_1" />
     <axis
       xyz="0 0 0" />
+  </joint>
+
+  <!-- ==================== INDEX_FORCE_SENSOR_1 SENSOR PADS (8x10 = 80) ==================== -->
+  <!-- 8x10 = 80个传感器pad，大小1.2mm×1.2mm×1.2mm，触发力15g，量程20N，采集帧率200FPS -->
+
+
+  <!-- 食指传感器1 pad 001 (位置: 第1行第1列) -->
+  <link name="index_sensor_1_pad_001">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_001_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_001"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 002 (位置: 第1行第2列) -->
+  <link name="index_sensor_1_pad_002">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_002_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_002"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 003 (位置: 第1行第3列) -->
+  <link name="index_sensor_1_pad_003">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_003_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_003"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 004 (位置: 第1行第4列) -->
+  <link name="index_sensor_1_pad_004">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_004_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_004"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 005 (位置: 第1行第5列) -->
+  <link name="index_sensor_1_pad_005">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_005_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_005"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 006 (位置: 第1行第6列) -->
+  <link name="index_sensor_1_pad_006">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_006_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_006"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 007 (位置: 第1行第7列) -->
+  <link name="index_sensor_1_pad_007">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_007_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_007"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 008 (位置: 第1行第8列) -->
+  <link name="index_sensor_1_pad_008">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_008_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_008"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 009 (位置: 第1行第9列) -->
+  <link name="index_sensor_1_pad_009">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_009_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_009"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 010 (位置: 第1行第10列) -->
+  <link name="index_sensor_1_pad_010">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_010_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_010"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 011 (位置: 第2行第1列) -->
+  <link name="index_sensor_1_pad_011">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_011_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_011"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 012 (位置: 第2行第2列) -->
+  <link name="index_sensor_1_pad_012">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_012_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_012"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 013 (位置: 第2行第3列) -->
+  <link name="index_sensor_1_pad_013">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_013_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_013"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 014 (位置: 第2行第4列) -->
+  <link name="index_sensor_1_pad_014">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_014_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_014"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 015 (位置: 第2行第5列) -->
+  <link name="index_sensor_1_pad_015">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_015_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_015"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 016 (位置: 第2行第6列) -->
+  <link name="index_sensor_1_pad_016">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_016_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_016"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 017 (位置: 第2行第7列) -->
+  <link name="index_sensor_1_pad_017">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_017_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_017"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 018 (位置: 第2行第8列) -->
+  <link name="index_sensor_1_pad_018">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_018_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_018"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 019 (位置: 第2行第9列) -->
+  <link name="index_sensor_1_pad_019">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_019_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_019"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 020 (位置: 第2行第10列) -->
+  <link name="index_sensor_1_pad_020">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_020_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_020"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 021 (位置: 第3行第1列) -->
+  <link name="index_sensor_1_pad_021">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_021_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_021"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 022 (位置: 第3行第2列) -->
+  <link name="index_sensor_1_pad_022">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_022_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_022"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 023 (位置: 第3行第3列) -->
+  <link name="index_sensor_1_pad_023">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_023_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_023"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 024 (位置: 第3行第4列) -->
+  <link name="index_sensor_1_pad_024">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_024_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_024"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 025 (位置: 第3行第5列) -->
+  <link name="index_sensor_1_pad_025">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_025_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_025"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 026 (位置: 第3行第6列) -->
+  <link name="index_sensor_1_pad_026">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_026_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_026"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 027 (位置: 第3行第7列) -->
+  <link name="index_sensor_1_pad_027">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_027_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_027"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 028 (位置: 第3行第8列) -->
+  <link name="index_sensor_1_pad_028">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_028_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_028"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 029 (位置: 第3行第9列) -->
+  <link name="index_sensor_1_pad_029">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_029_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_029"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 030 (位置: 第3行第10列) -->
+  <link name="index_sensor_1_pad_030">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_030_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_030"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 031 (位置: 第4行第1列) -->
+  <link name="index_sensor_1_pad_031">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_031_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_031"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 032 (位置: 第4行第2列) -->
+  <link name="index_sensor_1_pad_032">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_032_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_032"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 033 (位置: 第4行第3列) -->
+  <link name="index_sensor_1_pad_033">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_033_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_033"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 034 (位置: 第4行第4列) -->
+  <link name="index_sensor_1_pad_034">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_034_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_034"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 035 (位置: 第4行第5列) -->
+  <link name="index_sensor_1_pad_035">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_035_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_035"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 036 (位置: 第4行第6列) -->
+  <link name="index_sensor_1_pad_036">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_036_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_036"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 037 (位置: 第4行第7列) -->
+  <link name="index_sensor_1_pad_037">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_037_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_037"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 038 (位置: 第4行第8列) -->
+  <link name="index_sensor_1_pad_038">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_038_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_038"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 039 (位置: 第4行第9列) -->
+  <link name="index_sensor_1_pad_039">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_039_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_039"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 040 (位置: 第4行第10列) -->
+  <link name="index_sensor_1_pad_040">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_040_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_040"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 041 (位置: 第5行第1列) -->
+  <link name="index_sensor_1_pad_041">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_041_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_041"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 042 (位置: 第5行第2列) -->
+  <link name="index_sensor_1_pad_042">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_042_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_042"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 043 (位置: 第5行第3列) -->
+  <link name="index_sensor_1_pad_043">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_043_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_043"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 044 (位置: 第5行第4列) -->
+  <link name="index_sensor_1_pad_044">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_044_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_044"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 045 (位置: 第5行第5列) -->
+  <link name="index_sensor_1_pad_045">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_045_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_045"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 046 (位置: 第5行第6列) -->
+  <link name="index_sensor_1_pad_046">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_046_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_046"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 047 (位置: 第5行第7列) -->
+  <link name="index_sensor_1_pad_047">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_047_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_047"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 048 (位置: 第5行第8列) -->
+  <link name="index_sensor_1_pad_048">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_048_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_048"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 049 (位置: 第5行第9列) -->
+  <link name="index_sensor_1_pad_049">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_049_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_049"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 050 (位置: 第5行第10列) -->
+  <link name="index_sensor_1_pad_050">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_050_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_050"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 051 (位置: 第6行第1列) -->
+  <link name="index_sensor_1_pad_051">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_051_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_051"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 052 (位置: 第6行第2列) -->
+  <link name="index_sensor_1_pad_052">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_052_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_052"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 053 (位置: 第6行第3列) -->
+  <link name="index_sensor_1_pad_053">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_053_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_053"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 054 (位置: 第6行第4列) -->
+  <link name="index_sensor_1_pad_054">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_054_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_054"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 055 (位置: 第6行第5列) -->
+  <link name="index_sensor_1_pad_055">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_055_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_055"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 056 (位置: 第6行第6列) -->
+  <link name="index_sensor_1_pad_056">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_056_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_056"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 057 (位置: 第6行第7列) -->
+  <link name="index_sensor_1_pad_057">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_057_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_057"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 058 (位置: 第6行第8列) -->
+  <link name="index_sensor_1_pad_058">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_058_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_058"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 059 (位置: 第6行第9列) -->
+  <link name="index_sensor_1_pad_059">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_059_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_059"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 060 (位置: 第6行第10列) -->
+  <link name="index_sensor_1_pad_060">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_060_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_060"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 061 (位置: 第7行第1列) -->
+  <link name="index_sensor_1_pad_061">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_061_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_061"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 062 (位置: 第7行第2列) -->
+  <link name="index_sensor_1_pad_062">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_062_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_062"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 063 (位置: 第7行第3列) -->
+  <link name="index_sensor_1_pad_063">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_063_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_063"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 064 (位置: 第7行第4列) -->
+  <link name="index_sensor_1_pad_064">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_064_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_064"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 065 (位置: 第7行第5列) -->
+  <link name="index_sensor_1_pad_065">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_065_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_065"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 066 (位置: 第7行第6列) -->
+  <link name="index_sensor_1_pad_066">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_066_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_066"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 067 (位置: 第7行第7列) -->
+  <link name="index_sensor_1_pad_067">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_067_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_067"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 068 (位置: 第7行第8列) -->
+  <link name="index_sensor_1_pad_068">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_068_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_068"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 069 (位置: 第7行第9列) -->
+  <link name="index_sensor_1_pad_069">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_069_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_069"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 070 (位置: 第7行第10列) -->
+  <link name="index_sensor_1_pad_070">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_070_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_070"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 071 (位置: 第8行第1列) -->
+  <link name="index_sensor_1_pad_071">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_071_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_071"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.005400 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 072 (位置: 第8行第2列) -->
+  <link name="index_sensor_1_pad_072">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_072_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_072"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 073 (位置: 第8行第3列) -->
+  <link name="index_sensor_1_pad_073">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_073_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_073"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 074 (位置: 第8行第4列) -->
+  <link name="index_sensor_1_pad_074">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_074_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_074"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 075 (位置: 第8行第5列) -->
+  <link name="index_sensor_1_pad_075">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_075_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_075"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 076 (位置: 第8行第6列) -->
+  <link name="index_sensor_1_pad_076">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_076_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_076"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.000600 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 077 (位置: 第8行第7列) -->
+  <link name="index_sensor_1_pad_077">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_077_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_077"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.001800 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 078 (位置: 第8行第8列) -->
+  <link name="index_sensor_1_pad_078">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_078_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_078"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.003000 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 079 (位置: 第8行第9列) -->
+  <link name="index_sensor_1_pad_079">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_079_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_079"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.004200 0.000300"/>
+  </joint>
+
+  <!-- 食指传感器1 pad 080 (位置: 第8行第10列) -->
+  <link name="index_sensor_1_pad_080">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="sensor_index1_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="index_sensor_1_pad_080_joint" type="fixed">
+    <parent link="index_force_sensor_1"/>
+    <child link="index_sensor_1_pad_080"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.005400 0.000300"/>
   </joint>
   <link
     name="right_middle_1">

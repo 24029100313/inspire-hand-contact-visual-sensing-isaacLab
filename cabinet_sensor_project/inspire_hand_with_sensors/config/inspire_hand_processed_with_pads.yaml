@@ -1,53 +1,91 @@
-# Isaac Lab配置文件 - Inspire Hand with Sensor Pads
-# 包含316个接触点: 112个palm + 96个thumb1 + 8个thumb2 + 96个thumb3 + 4个force传感器
+# Isaac Lab Asset Configuration - Inspire Hand with Uniform 0.6mm Thickness Pads
+# Generated from: inspire_hand_processed_with_pads.urdf
+# Creation date: 2025-07-26 19:02:18
+# Total contact points: 396 (all pads with uniform 0.6mm thickness)
 
-metadata:
-  version: "1.0"
-  description: "Inspire Hand with comprehensive sensor pads - all sensor locations"
-  contact_points: 316
+inspire_hand_with_uniform_pads:
+  class_type: RigidObject
   
-sensor_configuration:
-  palm_sensors:
-    count: 112
-    layout: "14x8"
-    pad_size: "3.0x3.0x0.6mm"
-    color: "green"
-    
-  thumb_sensor_1:
-    count: 96
-    layout: "8x12"
-    pad_size: "1.2x1.2x0.6mm"
-    color: "blue"
-    
-  thumb_sensor_2:
-    count: 8
-    layout: "2x4"
-    pad_size: "1.2x1.2x0.6mm"
-    color: "orange"
-    
-  thumb_sensor_3:
-    count: 96
-    layout: "8x12"
-    pad_size: "1.2x1.2x0.6mm"
-    color: "purple"
-    trigger_force: "15g"
-    range: "20N"
-    framerate: "200FPS"
-    
-  force_sensors:
-    count: 4
-    locations: ["thumb_force_sensor_1", "thumb_force_sensor_2", "thumb_force_sensor_3", "thumb_force_sensor_4"]
-
-# Isaac Lab机械臂配置
-robot:
-  class_type: "Articulation"
-  usd_path: "./usd/inspire_hand_processed_with_pads.usd"
+  # USD file path
+  usd_path: "/home/larry/NVIDIA_DEV/isaac_grasp_ws/cabinet_sensor_project/inspire_hand_with_sensors/usd/inspire_hand_processed_with_pads.usd"
   
-actuators:
-  position_actuator:
-    class_type: "DCMotor"
-    saturation_effort: 100.0
-
-# 默认关节位置
-default_joint_pos:
-  ".*": 0.0
+  # Physics properties
+  physics:
+    rigid_body_enabled: true
+    kinematic_enabled: false
+    disable_gravity: false
+    
+  # Contact sensor configuration - Uniform 0.6mm thickness
+  contact_sensors:
+    # Palm sensor pads (14x8 = 112 sensors, 3.0x3.0x0.6mm, green)
+    palm_sensor_pads:
+      prim_path: "/inspire_hand_with_sensors/palm_sensor_pad_*"
+      update_period: 0.005  # 200 FPS 
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 112
+      grid_size: [14, 8]
+      pad_size: [0.003, 0.003, 0.0006]  # 3.0x3.0x0.6mm
+      color: "green"
+      
+    # Thumb1 sensor pads (8x12 = 96 sensors, 1.2x1.2x0.6mm, blue)
+    thumb_sensor_1_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_1_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 96
+      grid_size: [8, 12]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "blue"
+      
+    # Thumb2 sensor pads (2x4 = 8 sensors, 1.2x1.2x0.6mm, orange)
+    thumb_sensor_2_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_2_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 8
+      grid_size: [2, 4]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "orange"
+      
+    # Thumb3 sensor pads (8x12 = 96 sensors, 1.2x1.2x0.6mm, purple)
+    thumb_sensor_3_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_3_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 96
+      grid_size: [8, 12]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "purple"
+      
+    # Index1 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, red)
+    index_sensor_1_pads:
+      prim_path: "/inspire_hand_with_sensors/index_sensor_1_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 80
+      grid_size: [8, 10]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "red"
+  
+  # Summary
+  total_sensors:
+    palm_pads: 112
+    thumb1_pads: 96
+    thumb2_pads: 8
+    thumb3_pads: 96
+    index1_pads: 80
+    total_contact_points: 392  # 112+96+8+96+80
+    force_sensors: 7
+    uniform_thickness: 0.6  # mm
+    
+  # Sensor specifications
+  sensor_specs:
+    trigger_force: 15  # grams
+    force_range: 20    # Newtons
+    sample_rate: 200   # FPS
+    thickness: 0.6     # mm (unified)
