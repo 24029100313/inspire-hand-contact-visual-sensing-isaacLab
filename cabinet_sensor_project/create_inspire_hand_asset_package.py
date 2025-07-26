@@ -35,10 +35,23 @@ class InspireHandAssetPackageCreatorFixed:
     """Creates a complete Isaac Lab asset package for the Inspire Hand with fixes."""
     
     def __init__(self):
-        self.script_dir = Path(__file__).parent
-        self.source_urdf_dir = self.script_dir / "urdf_right_with_force_sensor"
-        self.package_name = "inspire_hand_with_sensors"
-        self.package_dir = self.script_dir / self.package_name
+        """Initialize paths and create package structure."""
+        # Source paths
+        self.source_dir = Path("/home/larry/NVIDIA_DEV/isaac_grasp_ws/cabinet_sensor_project")
+        self.source_urdf_dir = self.source_dir / "urdf_right_with_force_sensor"
+        self.source_urdf = self.source_urdf_dir / "urdf" / "urdf_right_with_force_sensor.urdf"
+        self.source_meshes = self.source_urdf_dir / "meshes"
+        self.source_textures = self.source_urdf_dir / "textures"
+        
+        # Package paths
+        self.package_dir = self.source_dir / "inspire_hand_with_sensors"
+        self.package_urdf = self.package_dir / "urdf"
+        self.package_meshes = self.package_dir / "meshes"
+        self.package_textures = self.package_dir / "textures"
+        self.package_usd = self.package_dir / "usd"
+        self.package_config = self.package_dir / "config"
+        self.package_examples = self.package_dir / "examples"
+        self.package_docs = self.package_dir / "docs"
         
         # Asset package structure
         self.structure = {
@@ -53,24 +66,17 @@ class InspireHandAssetPackageCreatorFixed:
         
     def verify_source_files(self):
         """Verify that source URDF files exist."""
-        if not self.source_urdf_dir.exists():
-            print(f"Error: Source URDF directory not found: {self.source_urdf_dir}")
+        if not self.source_urdf.exists():
+            print(f"Error: Source URDF file not found: {self.source_urdf}")
             return False
             
-        urdf_file = self.source_urdf_dir / "urdf" / "urdf_right_with_force_sensor.urdf"
-        meshes_dir = self.source_urdf_dir / "meshes"
-        
-        if not urdf_file.exists():
-            print(f"Error: URDF file not found: {urdf_file}")
-            return False
-            
-        if not meshes_dir.exists():
-            print(f"Error: Meshes directory not found: {meshes_dir}")
+        if not self.source_meshes.exists():
+            print(f"Error: Meshes directory not found: {self.source_meshes}")
             return False
         
         print(f"✓ Source files verified:")
-        print(f"  URDF: {urdf_file}")
-        print(f"  Meshes: {meshes_dir} ({len(list(meshes_dir.glob('*.STL')))} files)")
+        print(f"  URDF: {self.source_urdf}")
+        print(f"  Meshes: {self.source_meshes} ({len(list(self.source_meshes.glob('*.STL')))} files)")
         
         return True
     
@@ -100,51 +106,33 @@ class InspireHandAssetPackageCreatorFixed:
         print(f"✓ Package structure created with {len(self.structure)} directories")
     
     def copy_source_files(self):
-        """Copy URDF and mesh files to the package."""
+        """Copy source URDF, mesh and texture files to package."""
         print("\n📁 Copying source files...")
         
         # Copy URDF files
-        source_urdf_dir = self.source_urdf_dir / "urdf"
-        dest_urdf_dir = self.package_dir / "urdf"
-        
-        for urdf_file in source_urdf_dir.glob("*.urdf"):
-            shutil.copy2(urdf_file, dest_urdf_dir)
-            print(f"  ✓ Copied URDF: {urdf_file.name}")
+        shutil.copy2(self.source_urdf, self.package_urdf)
+        print(f"  ✓ Copied URDF: {self.source_urdf.name}")
         
         # Copy other URDF-related files
-        for other_file in source_urdf_dir.glob("*"):
+        for other_file in self.source_urdf_dir.glob("*"):
             if other_file.suffix not in ['.urdf']:
                 if other_file.is_file():
-                    shutil.copy2(other_file, dest_urdf_dir)
+                    shutil.copy2(other_file, self.package_urdf)
                     print(f"  ✓ Copied: {other_file.name}")
         
         # Copy mesh files
-        source_meshes_dir = self.source_urdf_dir / "meshes"
-        dest_meshes_dir = self.package_dir / "meshes"
-        
-        mesh_count = 0
-        for mesh_file in source_meshes_dir.glob("*"):
-            if mesh_file.is_file():
-                shutil.copy2(mesh_file, dest_meshes_dir)
-                mesh_count += 1
-        
-        print(f"  ✓ Copied {mesh_count} mesh files")
+        shutil.copytree(self.source_meshes, self.package_meshes, dirs_exist_ok=True)
+        print(f"  ✓ Copied {len(list(self.source_meshes.glob('*')))} mesh files")
         
         # Copy texture files if they exist
-        source_textures_dir = self.source_urdf_dir / "textures"
-        if source_textures_dir.exists():
-            dest_textures_dir = self.package_dir / "textures"
-            texture_count = 0
-            for texture_file in source_textures_dir.glob("*"):
-                if texture_file.is_file():
-                    shutil.copy2(texture_file, dest_textures_dir)
-                    texture_count += 1
-            print(f"  ✓ Copied {texture_count} texture files")
+        if self.source_textures.exists():
+            shutil.copytree(self.source_textures, self.package_textures, dirs_exist_ok=True)
+            print(f"  ✓ Copied {len(list(self.source_textures.glob('*')))} texture files")
     
     def preprocess_urdf_for_package(self):
         """Process URDF file to use relative paths within the package."""
-        urdf_file = self.package_dir / "urdf" / "urdf_right_with_force_sensor.urdf"
-        processed_urdf = self.package_dir / "urdf" / "inspire_hand_processed.urdf"
+        urdf_file = self.package_urdf / "urdf_right_with_force_sensor.urdf"
+        processed_urdf = self.package_urdf / "inspire_hand_processed.urdf"
         
         print(f"\n🔧 Processing URDF file: {urdf_file.name}")
         
@@ -256,7 +244,7 @@ File structure:
             print(f"  ✓ URDF imported successfully. Prim path: {prim_path}")
             
             # Save USD file
-            usd_file = self.package_dir / "usd" / "inspire_hand_with_sensors.usd"
+            usd_file = self.package_usd / "inspire_hand_with_sensors.usd"
             print(f"  Saving USD file to: {usd_file}")
             
             # Get stage and save
@@ -280,7 +268,7 @@ File structure:
     
     def create_isaac_lab_config(self, usd_file):
         """Create Isaac Lab configuration file with fixed variable scoping."""
-        config_file = self.package_dir / "config" / "inspire_hand_cfg.py"
+        config_file = self.package_config / "inspire_hand_cfg.py"
         
         print(f"\n⚙️  Creating Isaac Lab configuration...")
         
@@ -299,7 +287,7 @@ This configuration defines the Inspire Hand robot for use in Isaac Lab environme
 The hand includes 17 contact sensors distributed across fingers and palm.
 
 Usage:
-    from {self.package_name}.config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
+    from {self.package_dir.name}.config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
 """
 
 import os
@@ -569,7 +557,7 @@ if __name__ == "__main__":
     
     def create_example_scripts(self):
         """Create example usage scripts."""
-        examples_dir = self.package_dir / "examples"
+        examples_dir = self.package_examples
         
         print(f"\n📝 Creating example scripts...")
         
@@ -734,13 +722,13 @@ if __name__ == "__main__":
     
     def create_documentation(self):
         """Create documentation files."""
-        docs_dir = self.package_dir / "docs"
+        docs_dir = self.package_docs
         
         print(f"\n📚 Creating documentation...")
         
         # Main README
         readme_file = self.package_dir / "README.md"
-        readme_content = f'''# {self.package_name.replace('_', ' ').title()}
+        readme_content = f'''# {self.package_dir.name.replace('_', ' ').title()}
 
 A complete Isaac Lab asset package for the Inspire Hand with integrated contact sensors.
 
@@ -756,7 +744,7 @@ This package provides a fully-configured Inspire Hand robot for Isaac Lab simula
 ## Package Structure
 
 ```
-{self.package_name}/
+{self.package_dir.name}/
 ├── urdf/           # URDF robot description files
 ├── meshes/         # STL mesh files for visualization and collision
 ├── textures/       # Texture and material files  
@@ -789,7 +777,7 @@ The hand includes the following contact sensors:
 ### 1. Basic Usage
 
 ```python
-from {self.package_name}.config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
+from {self.package_dir.name}.config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
 
 # Use in your Isaac Lab environment configuration
 env_cfg.scene.robot = INSPIRE_HAND_CFG
@@ -808,11 +796,11 @@ cd examples/
 
 ### 3. Integration with Existing Projects
 
-Copy the entire `{self.package_name}` directory to your Isaac Lab workspace and import the configuration:
+Copy the entire `{self.package_dir.name}` directory to your Isaac Lab workspace and import the configuration:
 
 ```python
 import sys
-sys.path.append("path/to/{self.package_name}")
+sys.path.append("path/to/{self.package_dir.name}")
 from config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
 ```
 
@@ -863,7 +851,7 @@ Created on: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(f"\n📄 Creating package metadata...")
         
         info_data = {
-            "name": self.package_name,
+            "name": self.package_dir.name,
             "version": "1.0.1",
             "description": "Inspire Hand with 17 contact sensors for Isaac Lab (Fixed Version)",
             "author": "Auto-generated (Fixed)",
@@ -947,7 +935,7 @@ Created on: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(f"📄 Files Created: {self._count_files()}")
         
         # Check if USD was created
-        usd_path = self.package_dir / "usd" / "inspire_hand_with_sensors.usd"
+        usd_path = self.package_usd / "inspire_hand_with_sensors.usd"
         if usd_path.exists():
             print(f"✅ USD file successfully created: {usd_path.stat().st_size / (1024*1024):.2f} MB")
         else:
@@ -955,7 +943,7 @@ Created on: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         
         print(f"\n🎯 Next Steps:")
         print(f"1. Copy package to your Isaac Lab workspace")
-        print(f"2. Test with: ./isaaclab.sh -p {self.package_name}/examples/basic_demo.py")
+        print(f"2. Test with: ./isaaclab.sh -p {self.package_dir.name}/examples/basic_demo.py")
         print(f"3. Integrate into your own environments using the config files")
         print(f"4. Check package_info.json for details about fixes applied")
         

@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Inspire Hand with 17 contact sensors for Isaac Lab (Fixed Version)",
   "author": "Auto-generated (Fixed)",
-  "created": "2025-07-22T22:50:20.713897",
+  "created": "2025-07-23T08:49:52.157717",
   "isaac_lab_version": ">=1.0.0",
   "isaac_sim_version": ">=4.5.0",
   "fixes": [

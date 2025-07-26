@@ -106,4 +106,4 @@ from config.inspire_hand_cfg import INSPIRE_HAND_CFG, CONTACT_SENSOR_CFGS
 Original URDF model: `urdf_right_with_force_sensor`
 Isaac Lab integration: Auto-generated asset package (Fixed Version)
 
-Created on: 2025-07-22 22:50:20
+Created on: 2025-07-23 08:49:52
