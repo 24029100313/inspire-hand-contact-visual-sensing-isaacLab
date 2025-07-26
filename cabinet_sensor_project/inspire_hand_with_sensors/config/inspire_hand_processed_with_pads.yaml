@@ -1,0 +1,127 @@
+# Isaac Lab Asset Configuration - 14x8 Sensor Array
+# Generated from: inspire_hand_processed_with_pads.urdf
+# Creation date: 2025-07-26 10:10:21
+
+inspire_hand_with_sensors:
+  class_type: RigidObject
+  
+  # USD file path (relative to this config file)
+  usd_path: "../usd/inspire_hand_processed_with_pads.usd"
+  
+  # Physics properties
+  physics:
+    rigid_body_enabled: true
+    kinematic_enabled: false
+    disable_gravity: false
+    
+  # Contact sensor configuration
+  contact_sensors:
+    # Palm force sensor (original)
+    palm_force_sensor:
+      prim_path: "/inspire_hand_with_sensors/palm_force_sensor"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.098  # 10g in Newtons (10g * 9.8m/s²)
+      
+    # Palm sensor pads (112 individual sensors in 14x8 array)
+    palm_sensor_pads:
+      prim_path: "/inspire_hand_with_sensors/palm_sensor_pad_*"  # Wildcard for all pads
+      update_period: 0.005  # 200 FPS 
+      force_threshold: 0.098  # 10g trigger force
+      torque_threshold: 0.1
+      
+  # Joint configuration
+  joints:
+    # Thumb joints
+    right_thumb_1_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_thumb_2_joint:
+      drive_type: "angular" 
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_thumb_3_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    # Index finger joints
+    right_index_1_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_index_2_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_index_3_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    # Middle finger joints
+    right_middle_1_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_middle_2_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_middle_3_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    # Ring finger joints
+    right_ring_1_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_ring_2_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_ring_3_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    # Pinky joints
+    right_pinky_1_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_pinky_2_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+      
+    right_pinky_3_joint:
+      drive_type: "angular"
+      max_effort: 50.0
+      max_velocity: 10.0
+
+# Sensor pad specifications for 14x8 array
+sensor_specifications:
+  palm_sensor_pads:
+    count: 112  # 14x8 grid
+    dimensions: [0.003, 0.003, 0.0012]  # 3x3x1.2mm in meters
+    resolution: "3x3mm"
+    trigger_force: "10g"
+    max_force: "20N" 
+    sampling_rate: "200FPS"
+    coverage_area: [0.042, 0.024]  # 42x24mm in meters
+    layout:
+      grid_size: [14, 8]
+      spacing: [0.003, 0.003]  # 3x3mm spacing (tight pack)
+      arrangement: "紧密排列"
