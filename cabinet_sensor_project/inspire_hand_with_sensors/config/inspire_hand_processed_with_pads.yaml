@@ -1,9 +1,9 @@
-# Isaac Lab Asset Configuration - Inspire Hand with Uniform 0.6mm Thickness Pads
+# Isaac Lab Asset Configuration - Inspire Hand with Fixed Middle Force Sensor 1 Pads
 # Generated from: inspire_hand_processed_with_pads.urdf
-# Creation date: 2025-07-26 19:02:18
-# Total contact points: 396 (all pads with uniform 0.6mm thickness)
+# Creation date: 2025-07-26 19:54:28
+# Total contact points: 472 (including 80 fixed middle1 pads 10x8)
 
-inspire_hand_with_uniform_pads:
+inspire_hand_with_middle1_fixed_pads:
   class_type: RigidObject
   
   # USD file path
@@ -71,6 +71,17 @@ inspire_hand_with_uniform_pads:
       grid_size: [8, 10]
       pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
       color: "red"
+      
+    # Middle1 sensor pads (10x8 = 80 sensors, 1.2x1.2x0.6mm, cyan) - FIXED DIMENSIONS
+    middle_sensor_1_pads:
+      prim_path: "/inspire_hand_with_sensors/middle_sensor_1_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 80
+      grid_size: [10, 8]  # CORRECTED: 10 rows x 8 columns
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "cyan"
   
   # Summary
   total_sensors:
@@ -79,7 +90,8 @@ inspire_hand_with_uniform_pads:
     thumb2_pads: 8
     thumb3_pads: 96
     index1_pads: 80
-    total_contact_points: 392  # 112+96+8+96+80
+    middle1_pads: 80  # FIXED: 10x8 layout
+    total_contact_points: 472  # 112+96+8+96+80+80
     force_sensors: 7
     uniform_thickness: 0.6  # mm
     
