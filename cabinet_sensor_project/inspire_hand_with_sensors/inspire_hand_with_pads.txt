@@ -1,0 +1,2591 @@
+  <!-- 拇指1传感器 pad 1 (位置: 第1行第1列) -->
+  <link name="thumb_sensor_1_pad_001">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_001_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_001"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 2 (位置: 第1行第2列) -->
+  <link name="thumb_sensor_1_pad_002">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_002_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_002"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 3 (位置: 第1行第3列) -->
+  <link name="thumb_sensor_1_pad_003">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_003_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_003"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 4 (位置: 第1行第4列) -->
+  <link name="thumb_sensor_1_pad_004">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_004_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_004"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 5 (位置: 第1行第5列) -->
+  <link name="thumb_sensor_1_pad_005">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_005_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_005"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 6 (位置: 第1行第6列) -->
+  <link name="thumb_sensor_1_pad_006">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_006_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_006"/>
+    <origin rpy="0 0 0" xyz="-0.004200 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 7 (位置: 第1行第7列) -->
+  <link name="thumb_sensor_1_pad_007">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_007_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_007"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 8 (位置: 第1行第8列) -->
+  <link name="thumb_sensor_1_pad_008">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_008_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_008"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 9 (位置: 第1行第9列) -->
+  <link name="thumb_sensor_1_pad_009">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_009_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_009"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 10 (位置: 第1行第10列) -->
+  <link name="thumb_sensor_1_pad_010">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_010_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_010"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 11 (位置: 第1行第11列) -->
+  <link name="thumb_sensor_1_pad_011">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_011_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_011"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 12 (位置: 第1行第12列) -->
+  <link name="thumb_sensor_1_pad_012">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_012_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_012"/>
+    <origin rpy="0 0 0" xyz="-0.004200 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 13 (位置: 第2行第1列) -->
+  <link name="thumb_sensor_1_pad_013">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_013_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_013"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 14 (位置: 第2行第2列) -->
+  <link name="thumb_sensor_1_pad_014">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_014_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_014"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 15 (位置: 第2行第3列) -->
+  <link name="thumb_sensor_1_pad_015">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_015_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_015"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 16 (位置: 第2行第4列) -->
+  <link name="thumb_sensor_1_pad_016">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_016_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_016"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 17 (位置: 第2行第5列) -->
+  <link name="thumb_sensor_1_pad_017">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_017_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_017"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 18 (位置: 第2行第6列) -->
+  <link name="thumb_sensor_1_pad_018">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_018_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_018"/>
+    <origin rpy="0 0 0" xyz="-0.003000 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 19 (位置: 第2行第7列) -->
+  <link name="thumb_sensor_1_pad_019">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_019_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_019"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 20 (位置: 第2行第8列) -->
+  <link name="thumb_sensor_1_pad_020">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_020_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_020"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 21 (位置: 第2行第9列) -->
+  <link name="thumb_sensor_1_pad_021">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_021_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_021"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 22 (位置: 第2行第10列) -->
+  <link name="thumb_sensor_1_pad_022">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_022_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_022"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 23 (位置: 第2行第11列) -->
+  <link name="thumb_sensor_1_pad_023">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_023_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_023"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 24 (位置: 第2行第12列) -->
+  <link name="thumb_sensor_1_pad_024">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_024_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_024"/>
+    <origin rpy="0 0 0" xyz="-0.003000 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 25 (位置: 第3行第1列) -->
+  <link name="thumb_sensor_1_pad_025">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_025_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_025"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 26 (位置: 第3行第2列) -->
+  <link name="thumb_sensor_1_pad_026">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_026_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_026"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 27 (位置: 第3行第3列) -->
+  <link name="thumb_sensor_1_pad_027">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_027_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_027"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 28 (位置: 第3行第4列) -->
+  <link name="thumb_sensor_1_pad_028">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_028_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_028"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 29 (位置: 第3行第5列) -->
+  <link name="thumb_sensor_1_pad_029">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_029_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_029"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 30 (位置: 第3行第6列) -->
+  <link name="thumb_sensor_1_pad_030">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_030_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_030"/>
+    <origin rpy="0 0 0" xyz="-0.001800 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 31 (位置: 第3行第7列) -->
+  <link name="thumb_sensor_1_pad_031">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_031_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_031"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 32 (位置: 第3行第8列) -->
+  <link name="thumb_sensor_1_pad_032">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_032_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_032"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 33 (位置: 第3行第9列) -->
+  <link name="thumb_sensor_1_pad_033">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_033_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_033"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 34 (位置: 第3行第10列) -->
+  <link name="thumb_sensor_1_pad_034">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_034_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_034"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 35 (位置: 第3行第11列) -->
+  <link name="thumb_sensor_1_pad_035">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_035_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_035"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 36 (位置: 第3行第12列) -->
+  <link name="thumb_sensor_1_pad_036">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_036_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_036"/>
+    <origin rpy="0 0 0" xyz="-0.001800 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 37 (位置: 第4行第1列) -->
+  <link name="thumb_sensor_1_pad_037">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_037_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_037"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 38 (位置: 第4行第2列) -->
+  <link name="thumb_sensor_1_pad_038">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_038_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_038"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 39 (位置: 第4行第3列) -->
+  <link name="thumb_sensor_1_pad_039">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_039_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_039"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 40 (位置: 第4行第4列) -->
+  <link name="thumb_sensor_1_pad_040">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_040_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_040"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 41 (位置: 第4行第5列) -->
+  <link name="thumb_sensor_1_pad_041">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_041_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_041"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 42 (位置: 第4行第6列) -->
+  <link name="thumb_sensor_1_pad_042">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_042_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_042"/>
+    <origin rpy="0 0 0" xyz="-0.000600 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 43 (位置: 第4行第7列) -->
+  <link name="thumb_sensor_1_pad_043">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_043_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_043"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 44 (位置: 第4行第8列) -->
+  <link name="thumb_sensor_1_pad_044">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_044_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_044"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 45 (位置: 第4行第9列) -->
+  <link name="thumb_sensor_1_pad_045">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_045_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_045"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 46 (位置: 第4行第10列) -->
+  <link name="thumb_sensor_1_pad_046">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_046_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_046"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 47 (位置: 第4行第11列) -->
+  <link name="thumb_sensor_1_pad_047">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_047_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_047"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 48 (位置: 第4行第12列) -->
+  <link name="thumb_sensor_1_pad_048">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_048_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_048"/>
+    <origin rpy="0 0 0" xyz="-0.000600 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 49 (位置: 第5行第1列) -->
+  <link name="thumb_sensor_1_pad_049">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_049_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_049"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 50 (位置: 第5行第2列) -->
+  <link name="thumb_sensor_1_pad_050">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_050_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_050"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 51 (位置: 第5行第3列) -->
+  <link name="thumb_sensor_1_pad_051">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_051_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_051"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 52 (位置: 第5行第4列) -->
+  <link name="thumb_sensor_1_pad_052">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_052_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_052"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 53 (位置: 第5行第5列) -->
+  <link name="thumb_sensor_1_pad_053">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_053_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_053"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 54 (位置: 第5行第6列) -->
+  <link name="thumb_sensor_1_pad_054">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_054_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_054"/>
+    <origin rpy="0 0 0" xyz="0.000600 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 55 (位置: 第5行第7列) -->
+  <link name="thumb_sensor_1_pad_055">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_055_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_055"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 56 (位置: 第5行第8列) -->
+  <link name="thumb_sensor_1_pad_056">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_056_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_056"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 57 (位置: 第5行第9列) -->
+  <link name="thumb_sensor_1_pad_057">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_057_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_057"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 58 (位置: 第5行第10列) -->
+  <link name="thumb_sensor_1_pad_058">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_058_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_058"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 59 (位置: 第5行第11列) -->
+  <link name="thumb_sensor_1_pad_059">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_059_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_059"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 60 (位置: 第5行第12列) -->
+  <link name="thumb_sensor_1_pad_060">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_060_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_060"/>
+    <origin rpy="0 0 0" xyz="0.000600 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 61 (位置: 第6行第1列) -->
+  <link name="thumb_sensor_1_pad_061">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_061_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_061"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 62 (位置: 第6行第2列) -->
+  <link name="thumb_sensor_1_pad_062">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_062_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_062"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 63 (位置: 第6行第3列) -->
+  <link name="thumb_sensor_1_pad_063">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_063_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_063"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 64 (位置: 第6行第4列) -->
+  <link name="thumb_sensor_1_pad_064">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_064_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_064"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 65 (位置: 第6行第5列) -->
+  <link name="thumb_sensor_1_pad_065">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_065_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_065"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 66 (位置: 第6行第6列) -->
+  <link name="thumb_sensor_1_pad_066">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_066_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_066"/>
+    <origin rpy="0 0 0" xyz="0.001800 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 67 (位置: 第6行第7列) -->
+  <link name="thumb_sensor_1_pad_067">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_067_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_067"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 68 (位置: 第6行第8列) -->
+  <link name="thumb_sensor_1_pad_068">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_068_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_068"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 69 (位置: 第6行第9列) -->
+  <link name="thumb_sensor_1_pad_069">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_069_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_069"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 70 (位置: 第6行第10列) -->
+  <link name="thumb_sensor_1_pad_070">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_070_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_070"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 71 (位置: 第6行第11列) -->
+  <link name="thumb_sensor_1_pad_071">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_071_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_071"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 72 (位置: 第6行第12列) -->
+  <link name="thumb_sensor_1_pad_072">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_072_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_072"/>
+    <origin rpy="0 0 0" xyz="0.001800 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 73 (位置: 第7行第1列) -->
+  <link name="thumb_sensor_1_pad_073">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_073_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_073"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 74 (位置: 第7行第2列) -->
+  <link name="thumb_sensor_1_pad_074">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_074_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_074"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 75 (位置: 第7行第3列) -->
+  <link name="thumb_sensor_1_pad_075">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_075_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_075"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 76 (位置: 第7行第4列) -->
+  <link name="thumb_sensor_1_pad_076">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_076_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_076"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 77 (位置: 第7行第5列) -->
+  <link name="thumb_sensor_1_pad_077">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_077_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_077"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 78 (位置: 第7行第6列) -->
+  <link name="thumb_sensor_1_pad_078">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_078_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_078"/>
+    <origin rpy="0 0 0" xyz="0.003000 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 79 (位置: 第7行第7列) -->
+  <link name="thumb_sensor_1_pad_079">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_079_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_079"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 80 (位置: 第7行第8列) -->
+  <link name="thumb_sensor_1_pad_080">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_080_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_080"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 81 (位置: 第7行第9列) -->
+  <link name="thumb_sensor_1_pad_081">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_081_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_081"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 82 (位置: 第7行第10列) -->
+  <link name="thumb_sensor_1_pad_082">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_082_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_082"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 83 (位置: 第7行第11列) -->
+  <link name="thumb_sensor_1_pad_083">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_083_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_083"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 84 (位置: 第7行第12列) -->
+  <link name="thumb_sensor_1_pad_084">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_084_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_084"/>
+    <origin rpy="0 0 0" xyz="0.003000 0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 85 (位置: 第8行第1列) -->
+  <link name="thumb_sensor_1_pad_085">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_085_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_085"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.006600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 86 (位置: 第8行第2列) -->
+  <link name="thumb_sensor_1_pad_086">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_086_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_086"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 87 (位置: 第8行第3列) -->
+  <link name="thumb_sensor_1_pad_087">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_087_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_087"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 88 (位置: 第8行第4列) -->
+  <link name="thumb_sensor_1_pad_088">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_088_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_088"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 89 (位置: 第8行第5列) -->
+  <link name="thumb_sensor_1_pad_089">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_089_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_089"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 90 (位置: 第8行第6列) -->
+  <link name="thumb_sensor_1_pad_090">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_090_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_090"/>
+    <origin rpy="0 0 0" xyz="0.004200 -0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 91 (位置: 第8行第7列) -->
+  <link name="thumb_sensor_1_pad_091">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_091_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_091"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.000600 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 92 (位置: 第8行第8列) -->
+  <link name="thumb_sensor_1_pad_092">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_092_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_092"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.001800 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 93 (位置: 第8行第9列) -->
+  <link name="thumb_sensor_1_pad_093">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_093_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_093"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.003000 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 94 (位置: 第8行第10列) -->
+  <link name="thumb_sensor_1_pad_094">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_094_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_094"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.004200 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 95 (位置: 第8行第11列) -->
+  <link name="thumb_sensor_1_pad_095">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_095_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_095"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.005400 0.000060"/>
+  </joint>
+
+  <!-- 拇指1传感器 pad 96 (位置: 第8行第12列) -->
+  <link name="thumb_sensor_1_pad_096">
+    <visual>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+      <material name="sensor_thumb_blue">
+        <color rgba="0.0 0.5 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001200 0.001200 0.000120"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="1.0e-12" ixy="0.0" ixz="0.0" iyy="1.0e-12" iyz="0.0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <joint name="thumb_sensor_1_pad_096_joint" type="fixed">
+    <parent link="thumb_force_sensor_1"/>
+    <child link="thumb_sensor_1_pad_096"/>
+    <origin rpy="0 0 0" xyz="0.004200 0.006600 0.000060"/>
+  </joint>
