@@ -1,13 +1,13 @@
 # Inspire Hand with Force Sensors
 
-This project contains the complete Inspire Hand model with 961+ tactile sensor pads for Isaac Sim.
+This project contains the complete Inspire Hand model with 970+ tactile sensor pads for Isaac Sim.
 
 ## Quick Start
 1. Load URDF: `urdf/inspire_hand_processed_with_pads.urdf`
 2. Convert to USD using provided scripts
 3. Import into Isaac Sim for simulation
 
-## Current Sensor Count: 961 pads
+## Current Sensor Count: 970 pads
 See README_SENSOR_PAD_PROCESS.md for detailed process documentation.
 
 ## Dependencies
