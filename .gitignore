@@ -1,0 +1,29 @@
+# Backup files
+*_before_*.urdf
+*.bak
+*.tmp
+
+# Large binary files
+*.usd
+*.usda
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+export.log
+
+# Temporary files
+temp_*
+*_temp.*
