@@ -16087,6 +16087,250 @@ File structure:
     <axis
       xyz="0 0 0" />
   </joint>
+  <link name="middle_sensor_3_pad_001">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_001_joint" type="fixed">
+    <origin xyz="-0.001200 -0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_001"/>
+  </joint>
+  <link name="middle_sensor_3_pad_002">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_002_joint" type="fixed">
+    <origin xyz="-0.001200 0.000000 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_002"/>
+  </joint>
+  <link name="middle_sensor_3_pad_003">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_003_joint" type="fixed">
+    <origin xyz="-0.001200 0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_003"/>
+  </joint>
+  <link name="middle_sensor_3_pad_004">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_004_joint" type="fixed">
+    <origin xyz="0.000000 -0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_004"/>
+  </joint>
+  <link name="middle_sensor_3_pad_005">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_005_joint" type="fixed">
+    <origin xyz="0.000000 0.000000 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_005"/>
+  </joint>
+  <link name="middle_sensor_3_pad_006">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_006_joint" type="fixed">
+    <origin xyz="0.000000 0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_006"/>
+  </joint>
+  <link name="middle_sensor_3_pad_007">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_007_joint" type="fixed">
+    <origin xyz="0.001200 -0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_007"/>
+  </joint>
+  <link name="middle_sensor_3_pad_008">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_008_joint" type="fixed">
+    <origin xyz="0.001200 0.000000 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_008"/>
+  </joint>
+  <link name="middle_sensor_3_pad_009">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0.0 1.0 1.0 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001200 0.001200 0.000600"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_pad_009_joint" type="fixed">
+    <origin xyz="0.001200 0.001200 0.000300" rpy="0 0 0"/>
+    <parent link="middle_force_sensor_3"/>
+    <child link="middle_sensor_3_pad_009"/>
+  </joint>
+
   <link
     name="middle_force_sensor_1">
     <inertial>
