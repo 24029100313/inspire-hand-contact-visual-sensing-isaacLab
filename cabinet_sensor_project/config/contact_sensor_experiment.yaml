@@ -1,0 +1,66 @@
+# Contact Sensor Experiment Configuration
+
+# Experiment Parameters
+experiment:
+  name: "ContactSensorExperiment"
+  description: "Learning experiment with 4 contact sensors and falling cube"
+  duration_seconds: 10.0
+  
+# Simulation Settings
+simulation:
+  timestep: 0.01666  # 60 Hz
+  render_interval: 1
+  physics_material:
+    static_friction: 1.0
+    dynamic_friction: 1.0
+    restitution: 0.0
+
+# Falling Cube Configuration
+cube:
+  mass_kg: 1.0
+  size_m: [1.0, 1.0, 0.2]  # 1m x 1m x 0.2m - large enough to contact all sensors
+  initial_height_m: 2.0
+  color: [0.8, 0.1, 0.1]  # Red color
+  
+# Contact Sensor Configuration
+sensors:
+  count: 4
+  arrangement: "square"
+  spacing_m: 1.2  # Distance between sensors
+  sensor_size_m: [0.2, 0.2, 0.1]  # Small contact pads
+  color: [0.1, 0.8, 0.1]  # Green color
+  
+  # Sensor positions (automatically calculated in square arrangement)
+  positions:
+    sensor_1: [-0.6, -0.6, 0.0]  # Front-left
+    sensor_2: [0.6, -0.6, 0.0]   # Front-right
+    sensor_3: [0.6, 0.6, 0.0]    # Back-right
+    sensor_4: [-0.6, 0.6, 0.0]   # Back-left
+  
+  # Sensor settings
+  force_threshold: 0.1
+  update_rate: 60  # Hz
+  debug_visualization: true
+
+# Physics Verification
+physics:
+  expected_gravity_force: 9.81  # N (mass × g)
+  error_tolerance_percent: 5.0
+  
+# Data Collection
+data:
+  save_results: true
+  output_directory: "data/results/contact_sensor_experiment"
+  save_frequency_hz: 10
+  
+# Visualization
+visualization:
+  show_sensor_forces: true
+  show_total_force: true
+  force_vector_scale: 0.1
+  
+# Debug Settings
+debug:
+  print_force_data: true
+  print_frequency_hz: 1
+  verbose_logging: true

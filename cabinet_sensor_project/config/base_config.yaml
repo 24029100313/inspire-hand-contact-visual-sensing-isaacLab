@@ -1,0 +1,123 @@
+# Base Configuration for Cabinet Sensor Project
+# This file contains common settings shared across all experiments
+
+# Environment Configuration
+env:
+  num_envs: 64                    # Number of parallel environments
+  episode_length: 500             # Maximum episode length
+  
+  # Simulation settings
+  dt: 0.01                        # Physics timestep
+  physics_dt: 0.005               # Physics substep
+  rendering_dt: 0.02              # Rendering timestep
+  
+  # Robot configuration
+  robot:
+    name: "franka_panda"          # Robot type
+    control_mode: "position"       # Control mode: position, velocity, effort
+    
+  # Scene configuration
+  scene:
+    cabinet_asset: "cabinet_v1"    # Cabinet asset name
+    spawn_height: 0.8              # Spawn height above ground
+    randomize_pose: true           # Randomize initial pose
+    
+# Training Configuration
+training:
+  algorithm: "PPO"                # RL algorithm
+  max_iterations: 1000            # Maximum training iterations
+  save_interval: 100              # Model save interval
+  
+  # PPO specific settings
+  ppo:
+    learning_rate: 3e-4           # Learning rate
+    batch_size: 1024              # Batch size
+    mini_batch_size: 512          # Mini batch size
+    gamma: 0.99                   # Discount factor
+    gae_lambda: 0.95              # GAE lambda
+    clip_range: 0.2               # PPO clip range
+    entropy_coef: 0.01            # Entropy coefficient
+    value_coef: 0.5               # Value function coefficient
+    
+  # Network architecture
+  network:
+    hidden_sizes: [256, 256, 128] # Hidden layer sizes
+    activation: "relu"            # Activation function
+    use_batch_norm: false         # Use batch normalization
+    
+# Observation Configuration
+observation:
+  # Robot state
+  robot_state:
+    joint_positions: true         # Joint positions
+    joint_velocities: true        # Joint velocities
+    end_effector_pose: true       # End effector pose
+    
+  # Task specific
+  task_state:
+    cabinet_pose: true            # Cabinet pose
+    handle_pose: true             # Handle pose
+    gripper_state: true           # Gripper open/close state
+    
+# Reward Configuration
+reward:
+  # Reward weights
+  reach_reward: 1.0               # Reaching reward weight
+  grasp_reward: 2.0               # Grasping reward weight
+  open_reward: 5.0                # Opening reward weight
+  
+  # Penalty weights
+  collision_penalty: -1.0         # Collision penalty
+  timeout_penalty: -0.1           # Timeout penalty
+  
+# Experiment Configuration
+experiment:
+  name: "cabinet_sensor_experiment"
+  description: "Comparison between sensor-enhanced and baseline versions"
+  
+  # Logging
+  log_dir: "logs"
+  log_interval: 10                # Log interval in iterations
+  
+  # Checkpoints
+  checkpoint_dir: "data/models"
+  checkpoint_interval: 100        # Checkpoint interval
+  
+  # Results
+  results_dir: "data/results"
+  
+# System Configuration
+system:
+  # GPU settings
+  gpu_id: 0                       # GPU ID to use
+  
+  # CPU settings
+  num_threads: 8                  # Number of CPU threads
+  
+  # Memory settings
+  memory_limit: 0.8               # Memory limit as fraction of total
+  
+  # Process management
+  cleanup_processes: true         # Clean up Isaac Sim processes
+  cleanup_interval: 60            # Cleanup interval in seconds
+  
+# Visualization Configuration
+visualization:
+  enable_rendering: false         # Enable rendering during training
+  enable_visualization: true      # Enable visualization tools
+  
+  # Plotting
+  plot_style: "seaborn"          # Plot style
+  figure_size: [12, 8]           # Figure size
+  dpi: 300                       # Figure DPI
+  
+# Debugging Configuration
+debug:
+  verbose: false                  # Verbose output
+  print_interval: 100             # Print interval
+  save_debug_info: false          # Save debug information
+  
+# Seed Configuration
+random:
+  seed: 42                        # Default random seed
+  deterministic: false            # Deterministic execution
