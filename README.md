@@ -7,7 +7,7 @@ This project contains the complete Inspire Hand model with 970+ tactile sensor p
 2. Convert to USD using provided scripts
 3. Import into Isaac Sim for simulation
 
-## Current Sensor Count: 970 pads
+## Current Sensor Count: 979 pads
 See README_SENSOR_PAD_PROCESS.md for detailed process documentation.
 
 ## Dependencies
