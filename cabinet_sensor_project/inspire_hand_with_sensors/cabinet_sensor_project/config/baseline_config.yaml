@@ -1,0 +1,72 @@
+# Baseline Version Configuration
+# This file contains settings specific to the baseline version (no sensors)
+
+# Import base configuration
+base_config: "base_config.yaml"
+
+# Environment Configuration (extends base)
+env:
+  # Baseline settings (no sensors)
+  sensors:
+    enable_contact_sensors: false     # Disable contact sensors
+    
+  # Observation dimensions (without sensors)
+  observation_space:
+    total_dim: 31                     # Total observation dimension
+    
+    # Breakdown of observation
+    robot_state_dim: 18               # Robot joint states
+    task_state_dim: 13                # Task-specific states
+    sensor_dim: 0                     # No sensor data
+    
+# Training Configuration (baseline-specific)
+training:
+  # Baseline training parameters
+  baseline_training:
+    use_traditional_rewards: true     # Use traditional reward structure
+    focus_on_kinematics: true         # Focus on kinematic control
+    
+  # Network architecture for baseline
+  network:
+    # Simpler network for baseline
+    hidden_sizes: [256, 256, 128]     # Hidden layer sizes
+    activation: "relu"                # Activation function
+    use_batch_norm: false             # No batch normalization
+      
+# Reward Configuration (baseline-specific)
+reward:
+  # Traditional rewards without sensor feedback
+  traditional_rewards:
+    position_reward: 2.0              # Position-based reward
+    orientation_reward: 1.0           # Orientation-based reward
+    completion_reward: 10.0           # Task completion reward
+    
+  # Traditional penalties
+  traditional_penalties:
+    joint_limit_penalty: -0.5         # Joint limit penalty
+    singularity_penalty: -1.0         # Singularity penalty
+    
+# Experiment Configuration
+experiment:
+  name: "cabinet_baseline"
+  description: "Baseline version without sensors"
+  
+  # Baseline-specific logging
+  baseline_logging:
+    log_joint_states: true            # Log joint states
+    joint_log_interval: 100           # Joint logging interval
+    save_trajectory_plots: true       # Save trajectory plots
+    
+# Visualization Configuration
+visualization:
+  # Baseline visualization
+  baseline_viz:
+    show_trajectory: true             # Show trajectory visualization
+    show_joint_angles: true           # Show joint angle plots
+    trajectory_color: "blue"          # Trajectory color
+    
+# File paths
+paths:
+  script_name: "cabinet_rl_BASELINE.py"
+  log_prefix: "baseline"
+  model_save_name: "baseline_model"

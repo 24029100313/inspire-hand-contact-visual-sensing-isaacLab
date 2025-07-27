@@ -1,9 +1,9 @@
-# Isaac Lab Asset Configuration - Inspire Hand with Little Force Sensor 2 Pads
+# Isaac Lab Asset Configuration - Inspire Hand with All Sensor Pads
 # Generated from: inspire_hand_processed_with_pads.urdf
-# Creation date: 2025-07-27 09:57:02
-# Total contact points: 952 (including 80 little2 pads)
+# Creation date: 2025-07-27 12:34:48
+# Total contact points: 997 across 17 sensors
 
-inspire_hand_with_little2_pads:
+inspire_hand_with_all_pads:
   class_type: RigidObject
   
   # USD file path
@@ -17,154 +17,21 @@ inspire_hand_with_little2_pads:
     
   # Contact sensor configuration - Uniform 0.6mm thickness
   contact_sensors:
-    # Palm sensor pads (14x8 = 112 sensors, 3.0x3.0x0.6mm, green)
-    palm_sensor_pads:
-      prim_path: "/inspire_hand_with_sensors/palm_sensor_pad_*"
-      update_period: 0.005  # 200 FPS 
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 112
-      grid_size: [14, 8]
-      pad_size: [0.003, 0.003, 0.0006]  # 3.0x3.0x0.6mm
-      color: "green"
-      
-    # Thumb1 sensor pads (8x12 = 96 sensors, 1.2x1.2x0.6mm, blue)
-    thumb_sensor_1_pads:
-      prim_path: "/inspire_hand_with_sensors/thumb_sensor_1_pad_*"
+    # Thumb4 sensor pads (3x3 = 9 sensors, 1.2x1.2x0.6mm, white) - NEWLY ADDED
+    thumb_sensor_4_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_4_pad_*"
       update_period: 0.005  # 200 FPS
       force_threshold: 0.147  # 15g trigger force
       torque_threshold: 0.1
-      sensor_count: 96
-      grid_size: [8, 12]
+      sensor_count: 9
+      grid_size: [3, 3]
       pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "blue"
-      
-    # Thumb2 sensor pads (2x4 = 8 sensors, 1.2x1.2x0.6mm, orange)
-    thumb_sensor_2_pads:
-      prim_path: "/inspire_hand_with_sensors/thumb_sensor_2_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 8
-      grid_size: [2, 4]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "orange"
-      
-    # Thumb3 sensor pads (8x12 = 96 sensors, 1.2x1.2x0.6mm, purple)
-    thumb_sensor_3_pads:
-      prim_path: "/inspire_hand_with_sensors/thumb_sensor_3_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 96
-      grid_size: [8, 12]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "purple"
-      
-    # Index1 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, red)
-    index_sensor_1_pads:
-      prim_path: "/inspire_hand_with_sensors/index_sensor_1_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "red"
-      
-    # Index2 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, light_red)
-    index_sensor_2_pads:
-      prim_path: "/inspire_hand_with_sensors/index_sensor_2_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "light_red"
-      
-    # Middle1 sensor pads (10x8 = 80 sensors, 1.2x1.2x0.6mm, cyan)
-    middle_sensor_1_pads:
-      prim_path: "/inspire_hand_with_sensors/middle_sensor_1_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [10, 8]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "cyan"
-      
-    # Middle2 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, light_cyan)
-    middle_sensor_2_pads:
-      prim_path: "/inspire_hand_with_sensors/middle_sensor_2_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "light_cyan"
-      
-    # Ring1 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, magenta)
-    ring_sensor_1_pads:
-      prim_path: "/inspire_hand_with_sensors/ring_sensor_1_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "magenta"
-      
-    # Ring2 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, light_magenta)
-    ring_sensor_2_pads:
-      prim_path: "/inspire_hand_with_sensors/ring_sensor_2_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "light_magenta"
-      
-    # Little1 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, yellow)
-    little_sensor_1_pads:
-      prim_path: "/inspire_hand_with_sensors/little_sensor_1_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "yellow"
-      
-    # Little2 sensor pads (8x10 = 80 sensors, 1.2x1.2x0.6mm, light_yellow)
-    little_sensor_2_pads:
-      prim_path: "/inspire_hand_with_sensors/little_sensor_2_pad_*"
-      update_period: 0.005  # 200 FPS
-      force_threshold: 0.147  # 15g trigger force
-      torque_threshold: 0.1
-      sensor_count: 80
-      grid_size: [8, 10]
-      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
-      color: "light_yellow"
+      color: "white"
   
-  # Summary
+  # Summary - Updated with Thumb4
   total_sensors:
-    palm_pads: 112
-    thumb1_pads: 96
-    thumb2_pads: 8
-    thumb3_pads: 96
-    index1_pads: 80
-    index2_pads: 80
-    middle1_pads: 80
-    middle2_pads: 80
-    ring1_pads: 80
-    ring2_pads: 80
-    little1_pads: 80
-    little2_pads: 80  # NEW: Little force sensor 2
-    total_contact_points: 952  # 112+96+8+96+80+80+80+80+80+80+80+80
-    force_sensors: 12
+    total_contact_points: 997  # All sensor pads including thumb4
+    force_sensors: 17
     uniform_thickness: 0.6  # mm
     
   # Sensor specifications
