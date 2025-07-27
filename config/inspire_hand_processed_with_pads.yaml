@@ -1,10 +1,42 @@
-# Isaac Lab Configuration for Inspire Hand with 988 Sensor Pads
-# Generated on: 2025-07-27 12:03:44
-# Total sensor pads: 988 (including little_sensor_3: 9 pads)
+# Isaac Lab Asset Configuration - Inspire Hand with All Sensor Pads
+# Generated from: inspire_hand_processed_with_pads.urdf
+# Creation date: 2025-07-27 12:34:48
+# Total contact points: 997 across 17 sensors
 
-inspire_hand_cfg:
-  usd_path: "{ISAAC_LAB_ASSETS}/Robots/inspire_hand_processed_with_pads.usd"
+inspire_hand_with_all_pads:
+  class_type: RigidObject
   
-  # Sensor configuration - 988 total pads
-  sensors:
-    total_sensor_pads: 988  # All sensors combined - Little3 added
+  # USD file path
+  usd_path: "/home/larry/NVIDIA_DEV/isaac_grasp_ws/cabinet_sensor_project/inspire_hand_with_sensors/usd/inspire_hand_processed_with_pads.usd"
+  
+  # Physics properties
+  physics:
+    rigid_body_enabled: true
+    kinematic_enabled: false
+    disable_gravity: false
+    
+  # Contact sensor configuration - Uniform 0.6mm thickness
+  contact_sensors:
+    # Thumb4 sensor pads (3x3 = 9 sensors, 1.2x1.2x0.6mm, white) - NEWLY ADDED
+    thumb_sensor_4_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_4_pad_*"
+      update_period: 0.005  # 200 FPS
+      force_threshold: 0.147  # 15g trigger force
+      torque_threshold: 0.1
+      sensor_count: 9
+      grid_size: [3, 3]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "white"
+  
+  # Summary - Updated with Thumb4
+  total_sensors:
+    total_contact_points: 997  # All sensor pads including thumb4
+    force_sensors: 17
+    uniform_thickness: 0.6  # mm
+    
+  # Sensor specifications
+  sensor_specs:
+    trigger_force: 15  # grams
+    force_range: 20    # Newtons
+    sample_rate: 200   # FPS
+    thickness: 0.6     # mm (unified)
