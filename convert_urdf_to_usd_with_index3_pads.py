@@ -2,7 +2,7 @@
 """
 Convert Inspire Hand URDF with Index Force Sensor 3 Pads to USD
 Creates a single USD file and corresponding YAML configuration
-Total: 961 sensor pads
+Total: 970 sensor pads (includes index_sensor_3: 9 pads)
 """
 
 import os
