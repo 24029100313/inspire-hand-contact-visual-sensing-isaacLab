@@ -1,0 +1,127 @@
+# Isaac Lab Asset Configuration - Inspire Hand with Reduced Sensor Pads
+# Generated from: inspire_hand_processed_with_reduced_pads.urdf
+# Creation date: 2025-08-05 15:29:26
+# Total contact points: 16 (4 sensor types × 4 pads each, 2x2 configuration)
+
+inspire_hand_with_reduced_pads:
+  class_type: RigidObject
+  
+  # USD file path
+  usd_path: "/home/larry/NVIDIA_DEV/isaac_grasp_ws/cabinet_sensor_project/inspire_hand_with_sensors/usd/inspire_hand_processed_with_reduced_pads.usd"
+  
+  # Physics properties
+  physics:
+    rigid_body_enabled: true
+    kinematic_enabled: false
+    disable_gravity: false
+    
+  # Contact sensor configuration - Optimized for memory efficiency
+  contact_sensors:
+    # Index sensor 2 pads (2x2 = 4 sensors, 1.2x1.2x0.6mm)
+    index_sensor_2_pads:
+      prim_path: "/inspire_hand_with_sensors/index_sensor_2_pad_*"
+      update_period: 0.005  # 200 FPS 
+      force_threshold: 0.098  # 10g trigger force
+      torque_threshold: 0.1
+      sensor_count: 4
+      grid_size: [2, 2]
+      pad_size: [0.0012, 0.0012, 0.0006]  # 1.2x1.2x0.6mm
+      color: "blue"
+      positions:
+        - xyz: [-0.004620, -0.007260, 0.000300]
+        - xyz: [-0.003300, -0.007260, 0.000300]
+        - xyz: [-0.001980, -0.007260, 0.000300]
+        - xyz: [-0.000660, -0.007260, 0.000300]
+      
+    # Index sensor 3 pads (2x2 = 4 sensors, 1.2x1.2x0.6mm)
+    index_sensor_3_pads:
+      prim_path: "/inspire_hand_with_sensors/index_sensor_3_pad_*"
+      update_period: 0.005
+      force_threshold: 0.098
+      torque_threshold: 0.1
+      sensor_count: 4
+      grid_size: [2, 2]
+      pad_size: [0.0012, 0.0012, 0.0006]
+      color: "blue"
+      positions:
+        - xyz: [-0.001200, -0.001200, 0.000300]
+        - xyz: [-0.001200, 0.000000, 0.000300]
+        - xyz: [-0.001200, 0.001200, 0.000300]
+        - xyz: [0.000000, -0.001200, 0.000300]
+      
+    # Thumb sensor 3 pads (2x2 = 4 sensors, 1.2x1.2x0.6mm)
+    thumb_sensor_3_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_3_pad_*"
+      update_period: 0.005
+      force_threshold: 0.098
+      torque_threshold: 0.1
+      sensor_count: 4
+      grid_size: [2, 2]
+      pad_size: [0.0012, 0.0012, 0.0006]
+      color: "cyan"
+      positions:
+        - xyz: [-0.004200, -0.006600, 0.000300]
+        - xyz: [-0.004200, -0.005400, 0.000300]
+        - xyz: [-0.004200, -0.004200, 0.000300]
+        - xyz: [-0.004200, -0.003000, 0.000300]
+      
+    # Thumb sensor 4 pads (2x2 = 4 sensors, 1.2x1.2x0.6mm)
+    thumb_sensor_4_pads:
+      prim_path: "/inspire_hand_with_sensors/thumb_sensor_4_pad_*"
+      update_period: 0.005
+      force_threshold: 0.098
+      torque_threshold: 0.1
+      sensor_count: 4
+      grid_size: [2, 2]
+      pad_size: [0.0012, 0.0012, 0.0006]
+      color: "white"
+      positions:
+        - xyz: [-0.001200, -0.001200, 0.000300]
+        - xyz: [-0.001200, 0.000000, 0.000300]
+        - xyz: [-0.001200, 0.001200, 0.000300]
+        - xyz: [0.000000, -0.001200, 0.000300]
+
+  # Material properties
+  materials:
+    # Hand base materials
+    hand_material:
+      static_friction: 0.8
+      dynamic_friction: 0.6
+      restitution: 0.1
+    
+    # Sensor pad materials
+    sensor_material:
+      static_friction: 1.2
+      dynamic_friction: 1.0
+      restitution: 0.05
+
+  # Actuator configuration
+  actuators:
+    hand_actuator:
+      class_type: ImplicitActuator
+      joint_names_expr: [".*"]
+      effort_limit: 400.0
+      velocity_limit: 100.0
+      stiffness: 400.0
+      damping: 40.0
+
+# Environment configuration
+environment:
+  num_envs: 1024
+  env_spacing: 3.0
+  episode_length_s: 8.333  # 500 steps @ 60Hz
+
+# Simulation parameters
+sim:
+  dt: 0.0166667  # 60 Hz
+  substeps: 1
+  physics_material:
+    static_friction: 1.0
+    dynamic_friction: 1.0
+    restitution: 0.0
+
+# Rendering
+viewer:
+  eye: [2.5, 2.5, 2.5]
+  lookat: [0.0, 0.0, 0.0]
+  up: [0.0, 0.0, 1.0]
