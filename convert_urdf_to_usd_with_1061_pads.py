@@ -4,7 +4,7 @@ Convert Inspire Hand URDF with 1061 Sensor Pads to USD
 Creates a single USD file and corresponding YAML configuration
 Total: 1061 sensor pads (updated 4 sensors from 8x10 to 8x12)
 """
-
+，
 import os
 import sys
 import shutil
