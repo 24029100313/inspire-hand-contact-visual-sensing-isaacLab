@@ -172,7 +172,7 @@ class InspireHandContactTestSceneCfg(InteractiveSceneCfg):
             # Index root: (-0.039, 0.0006, 0.156)
             # Place cube on desktop surface for realistic grasping
             # Desktop surface at z=0.025, cube is 6cm, so center at z=0.055
-            pos=(0.07, 0.144, 0.0),  # New position as specified
+            pos=(0.07, 0.146, 0.0),  # New position as specified
             rot=(1.0, 0.0, 0.0, 0.0),
         ),
     )
