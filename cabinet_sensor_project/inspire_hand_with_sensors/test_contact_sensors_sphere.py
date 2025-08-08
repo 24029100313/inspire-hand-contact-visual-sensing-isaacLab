@@ -112,12 +112,12 @@ class InspireHandContactTestSceneCfg(InteractiveSceneCfg):
             ),
             articulation_props=sim_utils.ArticulationRootPropertiesCfg(
                 enabled_self_collisions=False,  # Disable self-collisions for stability
-                solver_position_iteration_count=16,
-                solver_velocity_iteration_count=1,
+                solver_position_iteration_count=32,
+                solver_velocity_iteration_count=2,
             ),
         ),
         init_state=ArticulationCfg.InitialStateCfg(
-            pos=(0.1, -0.045, 0.12),  # Hand position at specified coordinates
+            pos=(0.1, -0.045, 0.21),  # Raise hand by 10 cm for clearance
             rot=(0.754649, -0.655439, 0.029940, 0.002793),  # Hand palm facing down (-82°, 2.8°, -2.01°)
             joint_pos={
                 # Initial positions using Inspire Hand standard (converted to radians)
@@ -137,12 +137,21 @@ class InspireHandContactTestSceneCfg(InteractiveSceneCfg):
             },
         ),
         actuators={
-            "fingers": ImplicitActuatorCfg(
-                joint_names_expr=["right_.*_joint"],
-                effort_limit=15.0,  # Increased effort limit
-                velocity_limit=2.0,
-                stiffness=200.0,  # Increased stiffness to resist gravity
-                damping=20.0,  # Increased damping for better stability
+            # Strong clamp on thumb to keep it straight
+            "thumb_lock": ImplicitActuatorCfg(
+                joint_names_expr=["right_thumb_.*_joint"],
+                effort_limit_sim=120.0,
+                velocity_limit_sim=8.0,
+                stiffness=2000.0,
+                damping=200.0,
+            ),
+            # General gains for other fingers
+            "other_fingers": ImplicitActuatorCfg(
+                joint_names_expr=["right_(?!thumb).*_joint"],
+                effort_limit_sim=80.0,
+                velocity_limit_sim=8.0,
+                stiffness=1200.0,
+                damping=120.0,
             ),
         },
     )
@@ -151,7 +160,7 @@ class InspireHandContactTestSceneCfg(InteractiveSceneCfg):
     sphere: RigidObjectCfg = RigidObjectCfg(
         prim_path="{ENV_REGEX_NS}/Sphere",
         spawn=sim_utils.SphereCfg(
-            radius=0.05,  # 5cm radius sphere (10cm diameter)
+            radius=0.045,
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
                 disable_gravity=False,  # Enable gravity so sphere sits naturally on table
                 kinematic_enabled=False,  # Allow sphere to be moved by physics
@@ -169,12 +178,8 @@ class InspireHandContactTestSceneCfg(InteractiveSceneCfg):
             ),
         ),
         init_state=RigidObjectCfg.InitialStateCfg(
-            # Position based on URDF analysis:
-            # Thumb root: (-0.027, 0.021, 0.069)
-            # Index root: (-0.039, 0.0006, 0.156)
-            # Place sphere on desktop surface for realistic grasping
-            # Desktop surface at z=0.025, sphere radius=0.05, so center at z=0.075
-            pos=(0.068, 0.12, 0.075),  # Updated position with calculated z coordinate for 5cm sphere
+            # Original placement
+            pos=(0.068, 0.12, 0.075),
             rot=(1.0, 0.0, 0.0, 0.0),
         ),
     )
@@ -193,6 +198,7 @@ class InspireHandContactTestCfg(DirectRLEnvCfg):
     
     # Simulation settings
     sim: sim_utils.SimulationCfg = sim_utils.SimulationCfg(
+        device="cuda:0",  # revert to GPU PhysX
         dt=1.0 / 120.0,  # 120Hz for better contact detection
         render_interval=4,
         physics_material=sim_utils.RigidBodyMaterialCfg(
@@ -220,10 +226,7 @@ class InspireHandContactTestCfg(DirectRLEnvCfg):
     
     # Environment settings
     episode_length_s = 30.0  # Each cycle is 30 seconds: open -> close -> hold -> open
-    decimation = 4  # env_dt = sim_dt * decimation = 1/120 * 4 = 1/30s
-    num_actions = 6  # Control 6 main joints
-    num_observations = 50
-    num_states = 0
+    decimation = 1  # 120Hz control for best tracking
     
     # Add required spaces
     observation_space = 50  # Should match num_observations
@@ -244,17 +247,18 @@ class InspireHandContactTestEnv(DirectRLEnv):
         
         # Define the sensor pad names we want to monitor BEFORE calling super().__init__
         # (since _setup_scene is called during super().__init__)
-        self.sensor_pad_names = [
-            "thumb_force_sensor_1", "thumb_force_sensor_2", "thumb_force_sensor_3", "thumb_force_sensor_4",
-            "index_force_sensor_1", "index_force_sensor_2", "index_force_sensor_3",
-            "middle_force_sensor_1", "middle_force_sensor_2", "middle_force_sensor_3"
-        ]
+        self.sensor_pad_names = list(getattr(cfg, "selected_sensor_names", []))
         
         print(f"[INFO] Initializing InspireHandContactTestEnv with {len(self.sensor_pad_names)} sensor pads")
-        print(f"[INFO] Sensor pads: {self.sensor_pad_names}")
+        if self.sensor_pad_names:
+            print(f"[INFO] Sensor pads (first 20 shown): {self.sensor_pad_names[:20]}{' ...' if len(self.sensor_pad_names) > 20 else ''}")
         
         super().__init__(cfg, render_mode, **kwargs)
-        
+
+        # Initialize last 6-channel Inspire targets (little, ring, middle, index, thumb, extra)
+        self._last_inspire6 = torch.zeros(self.num_envs, 6, device=self.device)
+        self._last_inspire6[:, 4] = 400.0  # thumb stays at 400 baseline
+
         # Joint position targets (control commands)
         self._joint_pos_target = torch.zeros(self.num_envs, self.hand.num_joints, device=self.device)
         
@@ -282,7 +286,7 @@ class InspireHandContactTestEnv(DirectRLEnv):
         sensor_count = 0
         for sensor_name in self.sensor_pad_names:
             try:
-                sensor = self.scene[sensor_name]
+                sensor = self.scene[f"contact_{sensor_name}"]
                 sensor_count += 1
                 print(f"[INFO] ✓ Sensor '{sensor_name}' configured successfully")
             except KeyError:
@@ -334,12 +338,53 @@ class InspireHandContactTestEnv(DirectRLEnv):
         # Reset actors
         super()._reset_idx(env_ids)
         
-        # Reset hand to default joint positions
-        default_joint_pos = torch.zeros(len(env_ids), self.hand.num_joints, device=self.device)
-        
+        # Lazy init joint mappings and limits after PhysX views are ready
+        if not hasattr(self, "name_to_index"):
+            try:
+                self.joint_names = list(self.hand.joint_names)
+            except Exception:
+                self.joint_names = [f"joint_{i}" for i in range(self.hand.num_joints)]
+            self.name_to_index = {name: i for i, name in enumerate(self.joint_names)}
+            limits = self.hand.data.soft_joint_pos_limits  # (N, J, 2)
+            self.joint_min = limits[0, :, 0].to(self.device)
+            self.joint_max = limits[0, :, 1].to(self.device)
+            # One-time mapping debug will run after we write the reset state
+            try:
+                controlled_joint_names = [
+                    "right_thumb_1_joint",
+                    "right_index_1_joint",
+                    "right_middle_1_joint",
+                    "right_ring_1_joint",
+                    "right_little_1_joint",
+                ]
+                self._mapping_debug_joint_names = controlled_joint_names
+            except Exception as e:
+                print(f"[WARN] Mapping debug failed: {e}")
+
+        # Reset hand to default joint positions (from USD defaults + our init_state overrides)
         joint_pos = self.hand.data.default_joint_pos[env_ids].clone()
         joint_vel = self.hand.data.default_joint_vel[env_ids].clone()
         self.hand.write_joint_state_to_sim(joint_pos, joint_vel, env_ids=env_ids)
+
+        # After writing, cache the actual current joint positions as "open" defaults
+        current_pos = self.hand.data.joint_pos[env_ids]
+        # Use env 0 as reference for cached vectors
+        self.joint_default = self.hand.data.joint_pos[0].to(self.device)
+        # Print mapping debug once with updated defaults
+        if hasattr(self, "_mapping_debug_joint_names"):
+            print("\n[DEBUG] Joint mapping (open(q0)/min/max) and close direction (using current reset pose as open):")
+            for name in self._mapping_debug_joint_names:
+                j = self.name_to_index.get(name, None)
+                if j is None:
+                    print(f"  {name}: NOT FOUND")
+                    continue
+                q0 = float(self.joint_default[j].item())
+                qmin = float(self.joint_min[j].item())
+                qmax = float(self.joint_max[j].item())
+                dmin = abs(q0 - qmin)
+                dmax = abs(qmax - q0)
+                close = qmax if dmax >= dmin else qmin
+                print(f"  {name:22} idx={j:3d}  q0={q0:+.3f}  qmin={qmin:+.3f}  qmax={qmax:+.3f}  close={close:+.3f}")
         
         # Reset sphere position (changed from cube)
         self.sphere.reset(env_ids)
@@ -351,8 +396,8 @@ class InspireHandContactTestEnv(DirectRLEnv):
         self.grasp_state[env_ids] = 0
         self.state_timer[env_ids] = 0.0
         
-        # Set initial joint targets
-        self._joint_pos_target[env_ids] = default_joint_pos
+        # Set initial joint targets to current joint positions (stay at reset pose)
+        self._joint_pos_target[env_ids] = self.hand.data.joint_pos[env_ids]
 
     def _update_grasp_state(self):
         """Update the grasp state machine."""
@@ -367,118 +412,124 @@ class InspireHandContactTestEnv(DirectRLEnv):
         self.grasp_state[transition_mask] = (self.grasp_state[transition_mask] + 1) % 4
         self.state_timer[transition_mask] = 0.0
 
-    def _convert_to_radians(self, inspire_values: torch.Tensor) -> torch.Tensor:
-        """Convert Inspire Hand values (0-1000) to radians.
-        
-        The Inspire Hand uses 0-1000 range where:
-        - 0 = fully open
-        - 1000 = fully closed
-        
-        We need to map this to appropriate radian values for each joint.
-        Different joints have different ranges based on the URDF limits.
-        """
-        # Define the max angles for each joint (in radians)
-        # These are approximate values based on typical finger joint ranges
-        max_angles = torch.tensor([
-            1.16,  # thumb_1: ~66 degrees
-            0.58,  # thumb_2: ~33 degrees
-            0.50,  # thumb_3: ~28 degrees
-            3.14,  # thumb_4: ~180 degrees (but usually limited in practice)
-            1.44,  # index_1: ~82 degrees
-            3.14,  # index_2: ~180 degrees (but usually limited)
-            1.44,  # middle_1: ~82 degrees
-            3.14,  # middle_2: ~180 degrees
-            1.44,  # ring_1: ~82 degrees
-            3.14,  # ring_2: ~180 degrees
-            1.44,  # little_1: ~82 degrees
-            3.14,  # little_2: ~180 degrees
-        ], device=self.device)
-        
-        # Convert 0-1000 to 0-1 normalized, then scale by max angle
-        normalized = inspire_values / 1000.0
-        radians = normalized * max_angles.unsqueeze(0)
-        
-        return radians
+    def _convert_to_radians(self, inspire_values: torch.Tensor, joint_names_order: list[str]) -> torch.Tensor:
+        """Convert normalized open fraction (0..1) to radians using per-joint soft limits.
 
-    def _get_joint_targets(self) -> torch.Tensor:
-        """Get joint targets based on current grasp state using Inspire Hand 0-1000 range."""
-        # Initialize target positions in Inspire Hand range (0-1000)
-        inspire_pos = torch.zeros((self.num_envs, 12), device=self.device)
-        
+        Input inspire_values is normalized_open in [0,1], where 1=open, 0=closed.
+        For each joint, pick the farther soft limit from q_open as q_close. Output is:
+            q = q_close + normalized_open * (q_open - q_close)
+        i.e., normalized_open=1 -> q_open, normalized_open=0 -> q_close.
+        """
+        normalized_open = torch.clamp(inspire_values, 0.0, 1.0)  # (N, K)
+        q_open_list = []
+        q_close_list = []
+        for name in joint_names_order:
+            j = self.name_to_index.get(name, None)
+            if j is None:
+                q_open_list.append(torch.tensor(0.0, device=self.device))
+                q_close_list.append(torch.tensor(0.0, device=self.device))
+                continue
+            q0 = self.joint_default[j]
+            qmin = self.joint_min[j]
+            qmax = self.joint_max[j]
+            # pick farther limit from default as "close"
+            dmin = torch.abs(q0 - qmin)
+            dmax = torch.abs(qmax - q0)
+            q_close = torch.where(dmax >= dmin, qmax, qmin)
+            q_open_list.append(q0)
+            q_close_list.append(q_close)
+        q_open = torch.stack(q_open_list).unsqueeze(0)    # (1, K)
+        q_close = torch.stack(q_close_list).unsqueeze(0)  # (1, K)
+        return q_close + normalized_open * (q_open - q_close)
+
+    def _generate_inspire6(self) -> torch.Tensor:
+        """Generate 6-channel Inspire commands per env following hardware semantics.
+
+        Channel order: [little, ring, middle, index, thumb, extra]
+        - Range 0..1000, where 0=closed, 1000=open (hardware style)
+        - Thumb fixed to 400 baseline
+        - Extra channel unused, set to -1 (hold)
+        """
+        inspire6 = torch.full((self.num_envs, 6), -1.0, device=self.device)
         for env_idx in range(self.num_envs):
             state = self.grasp_state[env_idx].item()
-            
-            if state == 0:  # Open
-                # All joints at 0 (open position) except ring fingers
-                inspire_pos[env_idx] = 0.0
-                # Keep ring fingers slightly extended to avoid drooping
-                inspire_pos[env_idx, 8] = 50   # ring_1: slight extension (50/1000)
-                inspire_pos[env_idx, 9] = 100  # ring_2: slight extension (100/1000)
-                
-            elif state == 1:  # Closing
-                # Gradual closing
-                progress = self.state_timer[env_idx] / self.phase_durations[1]
-                
-                # Thumb joints - keep straight (not participating in grasp)
-                inspire_pos[env_idx, 0] = 0  # thumb_1: stay straight
-                inspire_pos[env_idx, 1] = 0  # thumb_2: stay straight
-                inspire_pos[env_idx, 2] = 0  # thumb_3: stay straight
-                inspire_pos[env_idx, 3] = 0  # thumb_4: stay straight
-                
-                # Index finger - main grasping finger
-                inspire_pos[env_idx, 4] = 950 * progress  # index_1 (increased from 800)
-                inspire_pos[env_idx, 5] = 1000 * progress  # index_2
-                
-                # Middle finger - support grasp
-                inspire_pos[env_idx, 6] = 700 * progress  # middle_1
-                inspire_pos[env_idx, 7] = 900 * progress  # middle_2
-                
-                # Ring finger - controlled extension to avoid drooping
-                inspire_pos[env_idx, 8] = 50 + (600 - 50) * progress  # ring_1: 50->600
-                inspire_pos[env_idx, 9] = 100 + (800 - 100) * progress  # ring_2: 100->800
-                
-                # Little finger
-                inspire_pos[env_idx, 10] = 500 * progress  # little_1
-                inspire_pos[env_idx, 11] = 700 * progress  # little_2
-                
-            elif state == 2:  # Holding
-                # Maintain closed position (in 0-1000 range)
-                inspire_pos[env_idx, 0] = 0   # thumb_1: stay straight
-                inspire_pos[env_idx, 1] = 0   # thumb_2: stay straight
-                inspire_pos[env_idx, 2] = 0   # thumb_3: stay straight
-                inspire_pos[env_idx, 3] = 0   # thumb_4: stay straight
-                inspire_pos[env_idx, 4] = 950   # index_1 (increased from 800)
-                inspire_pos[env_idx, 5] = 1000  # index_2
-                inspire_pos[env_idx, 6] = 700   # middle_1
-                inspire_pos[env_idx, 7] = 900   # middle_2
-                inspire_pos[env_idx, 8] = 600   # ring_1
-                inspire_pos[env_idx, 9] = 800   # ring_2
-                inspire_pos[env_idx, 10] = 500  # little_1
-                inspire_pos[env_idx, 11] = 700  # little_2
-                
-            elif state == 3:  # Opening
-                # Gradual opening back to start positions
-                progress = self.state_timer[env_idx] / self.phase_durations[3]
-                
-                # Thumb joints - stay straight throughout
-                inspire_pos[env_idx, 0] = 0   # thumb_1: stay straight
-                inspire_pos[env_idx, 1] = 0   # thumb_2: stay straight
-                inspire_pos[env_idx, 2] = 0   # thumb_3: stay straight
-                inspire_pos[env_idx, 3] = 0   # thumb_4: stay straight
-                inspire_pos[env_idx, 4] = 950 * (1.0 - progress)   # index_1 (increased from 800)
-                inspire_pos[env_idx, 5] = 1000 * (1.0 - progress)  # index_2
-                inspire_pos[env_idx, 6] = 700 * (1.0 - progress)   # middle_1
-                inspire_pos[env_idx, 7] = 900 * (1.0 - progress)   # middle_2
-                # Ring fingers go back to extended position, not fully open
-                inspire_pos[env_idx, 8] = 600 * (1.0 - progress) + 50 * progress  # ring_1: 600->50
-                inspire_pos[env_idx, 9] = 800 * (1.0 - progress) + 100 * progress  # ring_2: 800->100
-                inspire_pos[env_idx, 10] = 500 * (1.0 - progress)  # little_1
-                inspire_pos[env_idx, 11] = 700 * (1.0 - progress)  # little_2
-        
-        # Convert from Inspire Hand range (0-1000) to radians for Isaac Sim
-        radians = self._convert_to_radians(inspire_pos)
-        
-        return radians
+            t = torch.clamp(self.state_timer[env_idx] / self.phase_durations[state], 0.0, 1.0)
+            if state == 0:  # Open (go to 1000)
+                val = 1000.0
+            elif state == 1:  # Closing (1000 -> 0)
+                val = (1.0 - t.item()) * 1000.0
+            elif state == 2:  # Holding (stay closed)
+                val = 0.0
+            else:  # Opening (0 -> 1000)
+                val = t.item() * 1000.0
+
+            # Assign to little, ring, middle, index
+            inspire6[env_idx, 0] = val  # little
+            inspire6[env_idx, 1] = val  # ring
+            inspire6[env_idx, 2] = val  # middle
+            inspire6[env_idx, 3] = val  # index
+            inspire6[env_idx, 4] = 400.0  # thumb baseline
+            # channel 5 remains -1 (hold)
+        return inspire6
+
+    def _map_inspire6_to_joint_targets(self, inspire6: torch.Tensor) -> torch.Tensor:
+        """Map 6-channel Inspire commands to articulation joint targets.
+
+        - Apply -1 hold and deadzone of 20 compared to last value
+        - Convert 0..1000 (0=closed, 1000=open) to per-joint radians via soft limits
+        - For each finger, set both proximal *_1 and distal *_2 using same normalized value
+        - Thumb remains at default (locked by actuators); we do not change thumb joints here
+        """
+        # Apply -1 hold and deadzone
+        effective = self._last_inspire6.clone()
+        for i in range(6):
+            new_vals = inspire6[:, i]
+            hold_mask = new_vals < 0
+            delta = torch.abs(new_vals - self._last_inspire6[:, i])
+            small_mask = delta < 20.0
+            update_mask = (~hold_mask) & (~small_mask)
+            effective[:, i] = torch.where(update_mask, new_vals, effective[:, i])
+        # Enforce thumb baseline
+        effective[:, 4] = 400.0
+        self._last_inspire6 = effective
+
+        # Build per-finger joint name lists
+        finger_to_joints = {
+            0: ["right_little_1_joint", "right_little_2_joint"],
+            1: ["right_ring_1_joint", "right_ring_2_joint"],
+            2: ["right_middle_1_joint", "right_middle_2_joint"],
+            3: ["right_index_1_joint", "right_index_2_joint"],
+        }
+
+        # Start from current for stability
+        full_targets = self.hand.data.joint_pos.clone()
+
+        # For each finger channel 0..3, compute normalized (open fraction) and set both joints
+        for f_idx in range(4):
+            val = torch.clamp(effective[:, f_idx], 0.0, 1000.0)
+            # Convert from 0=closed,1000=open to normalized open fraction
+            norm_open = val / 1000.0
+            joint_names = finger_to_joints[f_idx]
+            # Make a tensor (N, 2) from norm_open for two joints
+            norm_pair = torch.stack([norm_open, norm_open], dim=1)
+            # Map to radians using soft limits per joint
+            rad_targets = self._convert_to_radians(norm_pair, joint_names)
+            for j_idx, jname in enumerate(joint_names):
+                j = self.name_to_index.get(jname, None)
+                if j is not None:
+                    full_targets[:, j] = rad_targets[:, j_idx]
+
+        # Explicitly set thumb joints to open defaults to prevent drift
+        for thumb_j in ["right_thumb_1_joint", "right_thumb_2_joint", "right_thumb_3_joint", "right_thumb_4_joint"]:
+            j = self.name_to_index.get(thumb_j, None)
+            if j is not None:
+                full_targets[:, j] = self.joint_default[j]
+        return full_targets
+
+    def _get_joint_targets(self) -> torch.Tensor:
+        """Compute joint targets from 6-channel Inspire commands strictly following controller semantics."""
+        inspire6 = self._generate_inspire6()
+        return self._map_inspire6_to_joint_targets(inspire6)
 
     def _process_contact_sensors(self):
         """Process contact sensor data and log forces."""
@@ -490,7 +541,7 @@ class InspireHandContactTestEnv(DirectRLEnv):
         
         for sensor_name in self.sensor_pad_names:
             try:
-                sensor = self.scene[sensor_name]
+                sensor = self.scene[f"contact_{sensor_name}"]
                 
                 # Check if sensor has data
                 if hasattr(sensor, 'data') and sensor.data is not None:
@@ -524,20 +575,15 @@ class InspireHandContactTestEnv(DirectRLEnv):
         
         print(f"\n=== Contact Forces at Step {self.step_count} ===")
         print(f"Grasp State: {current_state} | Sensors: {sensors_with_data}/{total_sensors} | Active: {active_forces}")
-        
-        # Group forces by finger
-        fingers = {
-            "Thumb": ["thumb_force_sensor_1", "thumb_force_sensor_2", "thumb_force_sensor_3", "thumb_force_sensor_4"],
-            "Index": ["index_force_sensor_1", "index_force_sensor_2", "index_force_sensor_3"],
-            "Middle": ["middle_force_sensor_1", "middle_force_sensor_2", "middle_force_sensor_3"]
-        }
-        
-        for finger_name, sensor_names in fingers.items():
-            print(f"\n{finger_name}:")
-            for sensor_name in sensor_names:
-                force = force_data.get(sensor_name, 0.0)
-                status = "🔴" if force > 0.1 else "⚡" if force > 0.001 else "⚫"
-                print(f"  {sensor_name}: {force:.6f} N {status}")
+        # Print up to 20 active sensors
+        active_items = [(n, f) for n, f in force_data.items() if f > 0.001]
+        active_items.sort(key=lambda x: x[1], reverse=True)
+        if not active_items:
+            print("No active contacts.")
+        else:
+            for name, fval in active_items[:20]:
+                status = "🔴" if fval > 0.1 else "⚡"
+                print(f"  {name}: {fval:.6f} N {status}")
 
     def _log_contact_forces_brief(self):
         """Log brief contact forces during active phases."""
@@ -554,12 +600,64 @@ class InspireHandContactTestEnv(DirectRLEnv):
             for sensor_name, force in active_forces_list:
                 print(f"  {sensor_name}: {force:.4f} N")
 
+    def _log_joint_angles_debug(self):
+        """Log detailed joint angle information for debugging."""
+        if not hasattr(self, 'debug_logged') or self.step_count % 60 == 0:  # Log every ~0.5s at 120Hz
+            state_names = ["Open", "Closing", "Holding", "Opening"]
+            current_state = state_names[self.grasp_state[0].item()]
+
+            print(f"\n=== Joint Angle Debug at Step {self.step_count} ===")
+            print(f"Grasp State: {current_state}")
+            print(f"State Timer: {self.state_timer[0].item():.2f}s")
+
+            # Recompute intended joint targets from 6-channel mapping
+            intended = self._map_inspire6_to_joint_targets(self._generate_inspire6())
+            actual = self.hand.data.joint_pos
+
+            # Per-finger pairs
+            pairs = [
+                ("little", ["right_little_1_joint", "right_little_2_joint"]),
+                ("ring", ["right_ring_1_joint", "right_ring_2_joint"]),
+                ("middle", ["right_middle_1_joint", "right_middle_2_joint"]),
+                ("index", ["right_index_1_joint", "right_index_2_joint"]),
+            ]
+
+            print("Finger    | Joint                 | idx  | target(rad) | actual(rad) | diff(rad)")
+            print("-" * 90)
+            for fname, jnames in pairs:
+                for jn in jnames:
+                    j = self.name_to_index.get(jn, None)
+                    if j is None:
+                        continue
+                    t = intended[0, j].item()
+                    a = actual[0, j].item()
+                    d = abs(t - a)
+                    status = "✓" if d < 0.1 else ("⚠️" if d < 0.3 else "❌")
+                    print(f"{fname:8} | {jn:20} | {j:4d} | {t:11.3f} | {a:11.3f} | {d:8.3f} {status}")
+
+            # Summaries per finger
+            print("\nPer-finger summary (max abs diff):")
+            for fname, jnames in pairs:
+                diffs = []
+                for jn in jnames:
+                    j = self.name_to_index.get(jn, None)
+                    if j is not None:
+                        diffs.append(abs(intended[0, j].item() - actual[0, j].item()))
+                if diffs:
+                    print(f"  {fname:8}: {max(diffs):.3f} rad")
+
+            if not hasattr(self, 'debug_logged'):
+                self.debug_logged = True
+
     def step(self, actions):
         """Step the environment."""
         # Call parent step method
         obs, rew, terminated, truncated, extras = super().step(actions)
         
         self.step_count += 1
+        
+        # Log joint angles for debugging
+        self._log_joint_angles_debug()
         
         # Log contact forces
         if self.step_count % 120 == 0:  # Every 4 seconds at 30Hz
@@ -576,37 +674,54 @@ def main():
     # Create the environment configuration
     cfg = InspireHandContactTestCfg()
     
-    # Define sensor names that match what we use in the environment
+    # Build only the requested pad sensors: index_sensor_2_pad_*, index_sensor_3_pad_*, thumb_sensor_3_pad_*, thumb_sensor_4_pad_*
     sensor_names = [
-        "thumb_force_sensor_1", "thumb_force_sensor_2", "thumb_force_sensor_3", "thumb_force_sensor_4",
-        "index_force_sensor_1", "index_force_sensor_2", "index_force_sensor_3",
-        "middle_force_sensor_1", "middle_force_sensor_2", "middle_force_sensor_3"
+        # Index sensor 2 pads (4 pads: 045, 046, 052, 053)
+        "index_sensor_2_pad_045", "index_sensor_2_pad_046",
+        "index_sensor_2_pad_052", "index_sensor_2_pad_053",
+
+        # Index sensor 3 pads (9 pads: 001-009)
+        "index_sensor_3_pad_001", "index_sensor_3_pad_002", "index_sensor_3_pad_003",
+        "index_sensor_3_pad_004", "index_sensor_3_pad_005", "index_sensor_3_pad_006",
+        "index_sensor_3_pad_007", "index_sensor_3_pad_008", "index_sensor_3_pad_009",
+
+        # Thumb sensor 3 pads (4 pads: 042, 043, 054, 055)
+        "thumb_sensor_3_pad_042", "thumb_sensor_3_pad_043",
+        "thumb_sensor_3_pad_054", "thumb_sensor_3_pad_055",
+
+        # Thumb sensor 4 pads (9 pads: 001-009)
+        "thumb_sensor_4_pad_001", "thumb_sensor_4_pad_002", "thumb_sensor_4_pad_003",
+        "thumb_sensor_4_pad_004", "thumb_sensor_4_pad_005", "thumb_sensor_4_pad_006",
+        "thumb_sensor_4_pad_007", "thumb_sensor_4_pad_008", "thumb_sensor_4_pad_009",
     ]
-    
-    # Add contact sensors dynamically (following the working pattern from reference implementation)
-    print(f"[INFO] Adding {len(sensor_names)} contact sensors to scene configuration...")
-    
+
+    print(f"[INFO] Adding {len(sensor_names)} specific pad sensors to scene configuration...")
+    added_count = 0
     for sensor_name in sensor_names:
         sensor_cfg = ContactSensorCfg(
             prim_path=f"{{ENV_REGEX_NS}}/InspireHand/{sensor_name}",
-            update_period=0.0,  # Update every simulation step
+            update_period=0.0,
             history_length=1,
-            debug_vis=True,  # Enable red dot visualization
-            track_pose=True,  # CRITICAL: This enables sensor data collection
-            force_threshold=0.001,  # 1mN threshold for detection
+            debug_vis=True,
+            track_pose=True,
+            force_threshold=0.001,
         )
-        
-        # Dynamically add sensor to scene config
-        setattr(cfg.scene, sensor_name, sensor_cfg)
-        print(f"[INFO] ✓ Added sensor: {sensor_name}")
-    
-    print(f"[INFO] All {len(sensor_names)} sensors added to configuration")
+        setattr(cfg.scene, f"contact_{sensor_name}", sensor_cfg)
+        added_count += 1
+    print(f"[INFO] Requested {added_count} pad sensors be added (non-existent prims will be ignored at runtime)")
+
+    # Pass selection into cfg for the environment to use
+    cfg.selected_sensor_names = sensor_names
     
     # Create environment
     env = InspireHandContactTestEnv(cfg=cfg, render_mode="rgb_array")
     
     # Setup camera
-    set_camera_view([2.0, 2.0, 2.0], [0.0, 0.0, 0.0])
+    try:
+        if not args_cli.headless:
+            set_camera_view([2.0, 2.0, 2.0], [0.0, 0.0, 0.0])
+    except Exception:
+        pass
     
     # Reset the environment
     env.reset()
